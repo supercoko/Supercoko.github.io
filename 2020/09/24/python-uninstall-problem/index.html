@@ -10,7 +10,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Coko,"> 
-    
+    <meta name="description" content="关于python卸载不掉的问题
+1. 问题描述我的情况是安装了很多版本的python, 但是在安装node.js的时候,未发现我配置在环境变量中的python 3.8.5, 在后台给重装了一遍,导致,"> 
     <meta name="author" content="supercoko"> 
     <link rel="alternative" href="atom.xml" title="supercoko" type="application/atom+xml"> 
     <link rel="icon" href="/img/logo.png"> 
@@ -60,7 +61,10 @@
 
         </div>
         <div class="content markdown">
-            
+            <h1 id="关于python卸载不掉的问题"><a href="#关于python卸载不掉的问题" class="headerlink" title="关于python卸载不掉的问题"></a>关于python卸载不掉的问题</h1><p><img src="http://5b0988e595225.cdn.sohucs.com/images/20190107/626de8aa4ba7407597d62351116f8260.jpeg" alt="cover"></p>
+<h2 id="1-问题描述"><a href="#1-问题描述" class="headerlink" title="1. 问题描述"></a>1. 问题描述</h2><p>我的情况是安装了很多版本的python, 但是在安装node.js的时候,未发现我配置在环境变量中的python 3.8.5, 在后台给重装了一遍,导致我原来安装的python无法启用,正准备重装的时候发现总会提醒已安装.<br>卸载也卸载不掉,repair之后也无法卸载.卡在这步.</p>
+<h2 id="2-解决方案"><a href="#2-解决方案" class="headerlink" title="2. 解决方案"></a>2. 解决方案</h2><p>经过查找方法,最终有效的是进入 user/local/appdata/ 找到对应版本的python*.exe, 删除即可</p>
+
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
                 <source type="audio/mpeg" src="">
@@ -99,7 +103,7 @@
 
     </div>
 </div>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"scale":1,"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300,"superSample":2},"mobile":{"show":true,"scale":0.5},"react":{"opacity":0.8,"dev":null,"border":false},"dialog":{"enable":true,"hitokoto":true}});</script></body>
 
 
 <script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
