@@ -1,955 +1,283 @@
-<!DOCTYPE html>
-<html lang="zh-CN" data-theme="light">
-    <head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <title>Coko - Good !!!</title><meta name="author" content="SuperCoko"><meta name="copyright" content="SuperCoko"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="アニメ好き">
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="Coko">
-        <meta property="og:url" content="https://supercoko.github.io/index.html">
-        <meta property="og:site_name" content="Coko">
-        <meta property="og:description" content="アニメ好き">
-        <meta property="og:locale" content="zh_CN">
-        <meta
-            property="og:image"
-            content="https://pic4.zhimg.com/v2-c21606cc260d1e83272a3b3243a2ff17_r.jpg">
-        <meta property="article:author" content="SuperCoko">
-        <meta property="article:tag" content="yGin910">
-        <meta name="twitter:card" content="summary">
-        <meta
-            name="twitter:image"
-            content="https://pic4.zhimg.com/v2-c21606cc260d1e83272a3b3243a2ff17_r.jpg"><link rel="shortcut icon" href="/img/favicon2.png"><link rel="canonical" href="https://supercoko.github.io/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"
-            media="print"
-            onload="this.media='all'"><link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css"
-            media="print"
-            onload="this.media='all'">
-        <script>
-            const GLOBAL_CONFIG = {
-                root: '/',
-                algolia: undefined,
-                localSearch: undefined,
-                translate: undefined,
-                noticeOutdate: undefined,
-                highlight: {
-                    "plugin": "highlighjs",
-                    "highlightCopy": true,
-                    "highlightLang": true,
-                    "highlightHeightLimit": false
-                },
-                copy: {
-                    success: '复制成功',
-                    error: '复制错误',
-                    noSupport: '浏览器不支持'
-                },
-                relativeDate: {
-                    homepage: true,
-                    post: false
-                },
-                runtime: '天',
-                date_suffix: {
-                    just: '刚刚',
-                    min: '分钟前',
-                    hour: '小时前',
-                    day: '天前',
-                    month: '个月前'
-                },
-                copyright: {
-                    "limitCount": 50,
-                    "languages": {
-                        "author": "作者: SuperCoko",
-                        "link": "链接: ",
-                        "source": "来源: Coko",
-                        "info": "著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"
-                    }
-                },
-                lightbox: 'fancybox',
-                Snackbar: undefined,
-                source: {
-                    justifiedGallery: {
-                        js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
-                        css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
-                    }
-                },
-                isPhotoFigcaption: true,
-                islazyload: false,
-                isAnchor: false
-            }
-        </script>
-        <script id="config-diff">
-            var GLOBAL_CONFIG_SITE = {
-                title: 'Coko',
-                isPost: false,
-                isHome: true,
-                isHighlightShrink: false,
-                isToc: false,
-                postUpdate: '2022-12-17 04:07:44'
-            }
-        </script>
-        <noscript>
-            <style type="text/css">
-                #nav {
-                    opacity: 1;
-                }
-                .justified-gallery img {
-                    opacity: 1;
-                }
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Coko - Good !!!</title><meta name="author" content="SuperCoko"><meta name="copyright" content="SuperCoko"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="アニメ好き">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Coko">
+<meta property="og:url" content="https://supercoko.github.io/index.html">
+<meta property="og:site_name" content="Coko">
+<meta property="og:description" content="アニメ好き">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic4.zhimg.com/v2-c21606cc260d1e83272a3b3243a2ff17_r.jpg">
+<meta property="article:author" content="SuperCoko">
+<meta property="article:tag" content="yGin910">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic4.zhimg.com/v2-c21606cc260d1e83272a3b3243a2ff17_r.jpg"><link rel="shortcut icon" href="/img/favicon2.png"><link rel="canonical" href="https://supercoko.github.io/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: SuperCoko","link":"链接: ","source":"来源: Coko","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Coko',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-01-02 03:16:35'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-                #post-meta time,
-                #recent-posts time {
-                    display: inline !important;
-                }
-            </style>
-        </noscript>
-        <script>
-            (win => {
-                win.saveToLocal = {
-                    set: function setWithExpiry(key, value, ttl) {
-                        if (ttl === 0) 
-                            return
-                        const now = new Date()
-                        const expiryDay = ttl * 86400000
-                        const item = {
-                            value: value,
-                            expiry: now.getTime() + expiryDay
-                        }
-                        localStorage.setItem(key, JSON.stringify(item))
-                    },
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
-                    get: function getWithExpiry(key) {
-                        const itemStr = localStorage.getItem(key)
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
 
-                        if (!itemStr) {
-                            return undefined
-                        }
-                        const item = JSON.parse(itemStr)
-                        const now = new Date()
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
 
-                        if (now.getTime() > item.expiry) {
-                            localStorage.removeItem(key)
-                            return undefined
-                        }
-                        return item.value
-                    }
-                }
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://pic4.zhimg.com/v2-c21606cc260d1e83272a3b3243a2ff17_r.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/img/top.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Coko</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Coko</h1><div id="site_social_icons"><a class="social-icon" href="https://github.com/supercoko" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:supercoko@126.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://space.bilibili.com/1963386" target="_blank" title="bilibili"><i class="fa-brands fa-bilibili"></i></a><a class="social-icon" href="https://www.youtube.com/channel/UCc24EY8DeKEnXi2VDFTx1Lw" target="_blank" title="Youtube"><i class="fa-brands fa-youtube"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2022/12/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86%E7%82%B9/" title="计算机网络知识点"><img class="post_bg" src="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计算机网络知识点"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/12/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86%E7%82%B9/" title="计算机网络知识点">计算机网络知识点</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-12-23T08:49:31.000Z" title="发表于 2022-12-23 19:49:31">2022-12-23</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-01-01T15:51:23.420Z" title="更新于 2023-01-02 02:51:23">2023-01-02</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%9F%BA%E7%A1%80-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">基础 计算机网络</a></span></div><div class="content">王道计算机网络第一章概念计算机网络: 是一个分散的, 具有独立功能的计算机系统, 通过通信设备与线路连接起来, 由功能完善的软件实现资源共享和信息传递的系统
+互联自治计算机集合
+功能数据通信(连通性)
+资源共享
 
-                win.getScript = url => new Promise((resolve, reject) => {
-                    const script = document.createElement('script')
-                    script.src = url
-                    script.async = true
-                    script.onerror = reject
-                    script.onload = script.onreadystatechange = function () {
-                        const loadState = this.readyState
-                        if (loadState && loadState !== 'loaded' && loadState !== 'complete') 
-                            return
-                        script.onload = script.onreadystatechange = null
-                        resolve()
-                    }
-                    document
-                        .head
-                        .appendChild(script)
-                })
+硬件
+软件
+数据
 
-                win.activateDarkMode = function () {
-                    document
-                        .documentElement
-                        .setAttribute('data-theme', 'dark')
-                    if (document.querySelector('meta[name="theme-color"]') !== null) {
-                        document
-                            .querySelector('meta[name="theme-color"]')
-                            .setAttribute('content', '#0d0d0d')
-                    }
-                }
-                win.activateLightMode = function () {
-                    document
-                        .documentElement
-                        .setAttribute('data-theme', 'light')
-                    if (document.querySelector('meta[name="theme-color"]') !== null) {
-                        document
-                            .querySelector('meta[name="theme-color"]')
-                            .setAttribute('content', '#ffffff')
-                    }
-                }
-                const t = saveToLocal.get('theme')
+分布式处理
 
-                if (t === 'dark') 
-                    activateDarkMode()
-                else if (t === 'light') 
-                    activateLightMode()
+多台计算机格各自承担同一工作不同部分 
+如 hadoop 平台
 
-                const asideStatus = saveToLocal.get('aside-status')
-                if (asideStatus !== undefined) {
-                    if (asideStatus === 'hide') {
-                        document
-                            .documentElement
-                            .classList
-                            .add('hide-aside')
-                    } else {
-                        document
-                            .documentElement
-                            .classList
-                            .remove('hide-aside')
-                    }
-                }
+提高可靠性
+负载均衡
+计算机网络的组成
+组成部分
 
-                const detectApple = () => {
-                    if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
-                        document
-                            .documentElement
-                            .classList
-                            .add('apple')
-                    }
-                }
-                detectApple()
-            })(window)
-        </script><meta name="generator" content="Hexo 6.3.0"></head>
-    <body>
-        <div id="sidebar">
-            <div id="menu-mask"></div>
-            <div id="sidebar-menus">
-                <div class="avatar-img is-center"><img
-                    src="https://pic4.zhimg.com/v2-c21606cc260d1e83272a3b3243a2ff17_r.jpg"
-                    onerror="onerror=null;src='/img/friend_404.gif'"
-                    alt="avatar"/></div>
-                <div class="sidebar-site-data site-data is-center">
-                    <a href="/archives/">
-                        <div class="headline">文章</div>
-                        <div class="length-num">6</div>
-                    </a>
-                    <a href="/tags/">
-                        <div class="headline">标签</div>
-                        <div class="length-num">0</div>
-                    </a>
-                    <a href="/categories/">
-                        <div class="headline">分类</div>
-                        <div class="length-num">0</div>
-                    </a>
-                </div><hr/>
-                <div class="menus_items">
-                    <div class="menus_item">
-                        <a class="site-page" href="/">
-                            <i class="fa-fw fas fa-home"></i>
-                            <span>
-                                Home</span></a>
-                    </div>
-                    <div class="menus_item">
-                        <a class="site-page" href="/archives/">
-                            <i class="fa-fw fas fa-archive"></i>
-                            <span>
-                                Archives</span></a>
-                    </div>
-                    <div class="menus_item">
-                        <a class="site-page" href="/tags/">
-                            <i class="fa-fw fas fa-tags"></i>
-                            <span>
-                                Tags</span></a>
-                    </div>
-                    <div class="menus_item">
-                        <a class="site-page" href="/categories/">
-                            <i class="fa-fw fas fa-folder-open"></i>
-                            <span>
-                                Categories</span></a>
-                    </div>
-                    <div class="menus_item">
-                        <a class="site-page group" href="javascript:void(0);">
-                            <i class="fa-fw fas fa-list"></i>
-                            <span>
-                                List</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </a>
-                        <ul class="menus_item_child">
-                            <li>
-                                <a class="site-page child" href="/music/">
-                                    <i class="fa-fw fas fa-music"></i>
-                                    <span>
-                                        Music</span></a>
-                            </li>
-                            <li>
-                                <a class="site-page child" href="/movies/">
-                                    <i class="fa-fw fas fa-video"></i>
-                                    <span>
-                                        Movie</span></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="menus_item">
-                        <a class="site-page" href="/link/">
-                            <i class="fa-fw fas fa-link"></i>
-                            <span>
-                                Link</span></a>
-                    </div>
-                    <div class="menus_item">
-                        <a class="site-page" href="/about/">
-                            <i class="fa-fw fas fa-heart"></i>
-                            <span>
-                                About</span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="page" id="body-wrap">
-            <header
-                class="full_page"
-                id="page-header"
-                style="background-image: url('/img/top.jpg')">
-                <nav id="nav">
-                    <span id="blog_name">
-                        <a id="site-name" href="/">Coko</a>
-                    </span>
-                    <div id="menus">
-                        <div class="menus_items">
-                            <div class="menus_item">
-                                <a class="site-page" href="/">
-                                    <i class="fa-fw fas fa-home"></i>
-                                    <span>
-                                        Home</span></a>
-                            </div>
-                            <div class="menus_item">
-                                <a class="site-page" href="/archives/">
-                                    <i class="fa-fw fas fa-archive"></i>
-                                    <span>
-                                        Archives</span></a>
-                            </div>
-                            <div class="menus_item">
-                                <a class="site-page" href="/tags/">
-                                    <i class="fa-fw fas fa-tags"></i>
-                                    <span>
-                                        Tags</span></a>
-                            </div>
-                            <div class="menus_item">
-                                <a class="site-page" href="/categories/">
-                                    <i class="fa-fw fas fa-folder-open"></i>
-                                    <span>
-                                        Categories</span></a>
-                            </div>
-                            <div class="menus_item">
-                                <a class="site-page group" href="javascript:void(0);">
-                                    <i class="fa-fw fas fa-list"></i>
-                                    <span>
-                                        List</span>
-                                    <i class="fas fa-chevron-down"></i>
-                                </a>
-                                <ul class="menus_item_child">
-                                    <li>
-                                        <a class="site-page child" href="/music/">
-                                            <i class="fa-fw fas fa-music"></i>
-                                            <span>
-                                                Music</span></a>
-                                    </li>
-                                    <li>
-                                        <a class="site-page child" href="/movies/">
-                                            <i class="fa-fw fas fa-video"></i>
-                                            <span>
-                                                Movie</span></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="menus_item">
-                                <a class="site-page" href="/link/">
-                                    <i class="fa-fw fas fa-link"></i>
-                                    <span>
-                                        Link</span></a>
-                            </div>
-                            <div class="menus_item">
-                                <a class="site-page" href="/about/">
-                                    <i class="fa-fw fas fa-heart"></i>
-                                    <span>
-                                        About</span></a>
-                            </div>
-                        </div>
-                        <div id="toggle-menu">
-                            <a class="site-page">
-                                <i class="fas fa-bars fa-fw"></i>
-                            </a>
-                        </div>
-                    </div>
-                </nav>
-                <div id="site-info">
-                    <h1 id="site-title">Coko</h1>
-                    <div id="site_social_icons">
-                        <a
-                            class="social-icon"
-                            href="https://github.com/supercoko"
-                            target="_blank"
-                            title="Github">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a
-                            class="social-icon"
-                            href="mailto:supercoko@126.com"
-                            target="_blank"
-                            title="Email">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <a
-                            class="social-icon"
-                            href="https://space.bilibili.com/1963386"
-                            target="_blank"
-                            title="bilibili">
-                            <i class="fa-brands fa-bilibili"></i>
-                        </a>
-                        <a
-                            class="social-icon"
-                            href="https://www.youtube.com/channel/UCc24EY8DeKEnXi2VDFTx1Lw"
-                            target="_blank"
-                            title="Youtube">
-                            <i class="fa-brands fa-youtube"></i>
-                        </a>
-                    </div>
-                </div>
-                <div id="scroll-down">
-                    <i class="fas fa-angle-down scroll-down-effects"></i>
-                </div>
-            </header>
-            <main class="layout" id="content-inner">
-                <div class="recent-posts" id="recent-posts">
-                    <div class="recent-post-item">
-                        <div class="post_cover left">
-                            <a
-                                href="/2022/12/16/%E4%B8%8D%E6%93%85%E9%95%BF%E7%9A%84%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/"
-                                title="不擅长的算法总结"><img
-                                class="post_bg"
-                                src="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png"
-                                onerror="this.onerror=null;this.src='/img/404.jpg'"
-                                alt="不擅长的算法总结"></a>
-                        </div>
-                        <div class="recent-post-info">
-                            <a
-                                class="article-title"
-                                href="/2022/12/16/%E4%B8%8D%E6%93%85%E9%95%BF%E7%9A%84%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/"
-                                title="不擅长的算法总结">不擅长的算法总结</a>
-                            <div class="article-meta-wrap">
-                                <span class="post-meta-date">
-                                    <i class="far fa-calendar-alt"></i>
-                                    <span class="article-meta-label">发表于</span>
-                                    <time
-                                        class="post-meta-date-created"
-                                        datetime="2022-12-15T19:23:00.000Z"
-                                        title="发表于 2022-12-16 06:23:00">2022-12-16</time>
-                                    <span class="article-meta-separator">|</span>
-                                    <i class="fas fa-history"></i>
-                                    <span class="article-meta-label">更新于</span>
-                                    <time
-                                        class="post-meta-date-updated"
-                                        datetime="2022-12-15T19:23:53.009Z"
-                                        title="更新于 2022-12-16 06:23:53">2022-12-16</time></span></div>
-                            <div class="content">不擅长的算法系列递归二分法</div>
-                        </div>
-                    </div>
-                    <div class="recent-post-item">
-                        <div class="post_cover left">
-                            <a href="/2022/12/16/%E9%80%92%E5%BD%92/" title="递归"><img
-                                class="post_bg"
-                                src="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png"
-                                onerror="this.onerror=null;this.src='/img/404.jpg'"
-                                alt="递归"></a>
-                        </div>
-                        <div class="recent-post-info">
-                            <a class="article-title" href="/2022/12/16/%E9%80%92%E5%BD%92/" title="递归">递归</a>
-                            <div class="article-meta-wrap">
-                                <span class="post-meta-date">
-                                    <i class="far fa-calendar-alt"></i>
-                                    <span class="article-meta-label">发表于</span>
-                                    <time
-                                        class="post-meta-date-created"
-                                        datetime="2022-12-15T17:17:53.000Z"
-                                        title="发表于 2022-12-16 04:17:53">2022-12-16</time>
-                                    <span class="article-meta-separator">|</span>
-                                    <i class="fas fa-history"></i>
-                                    <span class="article-meta-label">更新于</span>
-                                    <time
-                                        class="post-meta-date-updated"
-                                        datetime="2022-12-16T09:59:51.163Z"
-                                        title="更新于 2022-12-16 20:59:51">2022-12-16</time></span></div>
-                            <div class="content">递归算法思路整理定义递归：递归算法是把问题转化为规模缩小了的同类问题的子问题。然后递归调用函数（或过程）来表示问题的解。一个过程(或函数)直接或间接调用自己本身,这种过程(或函数)叫递归过程(或函数).
-                                递归算法有四个特性：（1）必须有可最终达到的终止条件，否则程序将陷入无穷循环（2）子问题在规模上比原问题小，或更接近终止条件；（3）子问题可通过再次递归调用求解或因满足终止条件而直接求解；（4）子问题的解应能组合为整个问题的解。
-                            </div>
-                        </div>
-                    </div>
-                    <div class="recent-post-item">
-                        <div class="post_cover left">
-                            <a
-                                href="/2022/12/15/%E8%8E%B7%E5%8F%96b%E7%AB%99%E7%B2%89%E4%B8%9D%E6%95%B0%E9%87%8F/"
-                                title="获取b站粉丝数量"><img
-                                class="post_bg"
-                                src="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png"
-                                onerror="this.onerror=null;this.src='/img/404.jpg'"
-                                alt="获取b站粉丝数量"></a>
-                        </div>
-                        <div class="recent-post-info">
-                            <a
-                                class="article-title"
-                                href="/2022/12/15/%E8%8E%B7%E5%8F%96b%E7%AB%99%E7%B2%89%E4%B8%9D%E6%95%B0%E9%87%8F/"
-                                title="获取b站粉丝数量">获取b站粉丝数量</a>
-                            <div class="article-meta-wrap">
-                                <span class="post-meta-date">
-                                    <i class="far fa-calendar-alt"></i>
-                                    <span class="article-meta-label">发表于</span>
-                                    <time
-                                        class="post-meta-date-created"
-                                        datetime="2022-12-15T04:37:30.000Z"
-                                        title="发表于 2022-12-15 15:37:30">2022-12-15</time>
-                                    <span class="article-meta-separator">|</span>
-                                    <i class="fas fa-history"></i>
-                                    <span class="article-meta-label">更新于</span>
-                                    <time
-                                        class="post-meta-date-updated"
-                                        datetime="2022-12-15T04:49:41.589Z"
-                                        title="更新于 2022-12-15 15:49:41">2022-12-15</time>
-                                </span>
-                            </div>
-                            <div class="content">获取b站粉丝数量并显示在hexo博客中先鸽住
-                                🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦
-                                API这是获取我粉丝数的api, 如需查询其他人的相关数据,只要更改vmid后的uid即可
-                                https://api.bilibili.com/x/relation/stat?vmid=1963386&amp;jsonp=jsonp 返回数据
-                                &#123;&quot;code&quot;:0,&quot;message&quot;:&quot;0&quot;,&quot;ttl&quot;:1,&quot;data&quot;:&#123;&quot;mid&quot;:1963386,&quot;following&quot;:243,&quot;whisper&quot;:0,&quot;black&quot;:209,&quot;follower&quot;:4884
-                                ...</div>
-                        </div>
-                    </div>
-                    <div class="recent-post-item">
-                        <div class="post_cover left">
-                            <a
-                                href="/2022/12/15/%E6%97%B6%E9%97%B4-%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/"
-                                title="时间/空间复杂度"><img
-                                class="post_bg"
-                                src="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png"
-                                onerror="this.onerror=null;this.src='/img/404.jpg'"
-                                alt="时间/空间复杂度"></a>
-                        </div>
-                        <div class="recent-post-info">
-                            <a
-                                class="article-title"
-                                href="/2022/12/15/%E6%97%B6%E9%97%B4-%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/"
-                                title="时间/空间复杂度">时间/空间复杂度</a>
-                            <div class="article-meta-wrap">
-                                <span class="post-meta-date">
-                                    <i class="far fa-calendar-alt"></i>
-                                    <span class="article-meta-label">发表于</span>
-                                    <time
-                                        class="post-meta-date-created"
-                                        datetime="2022-12-14T14:41:21.000Z"
-                                        title="发表于 2022-12-15 01:41:21">2022-12-15</time>
-                                    <span class="article-meta-separator">|</span>
-                                    <i class="fas fa-history"></i>
-                                    <span class="article-meta-label">更新于</span>
-                                    <time
-                                        class="post-meta-date-updated"
-                                        datetime="2022-12-15T04:36:48.994Z"
-                                        title="更新于 2022-12-15 15:36:48">2022-12-15</time>
-                                </span>
-                            </div>
-                            <div class="content">时间复杂度 常数O(1)# 运行次数与 N 大小呈常数关系，即不随输入数据大小 N*N* 的变化而变化。def
-                                algorithm(N): a = 1 b = 2 x = a*b+N return 1 无论 a 取多大，都与输入数据大小 N 无关，因此时间复杂度仍为
-                                O(1) 。def algorithm(N): count = 0 a = 10000 for i in range(a): count += 1 return
-                                count 线性O(N)循环运行次数与 N 大小呈线性关系，时间复杂度为 O(N)。def algorithm(N): count = 0 for i in
-                                range(N): count += 1 return count 虽然是两层循环，但第二层与 N 大小无关，因此整体仍与 N 呈线性关系。def
-                                algorithm(N): count = 0 a = 10000 for i in range(N): for j in rang ...</div>
-                        </div>
-                    </div>
-                    <div class="recent-post-item">
-                        <div class="post_cover left">
-                            <a
-                                href="/2022/12/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%96%84%E5%BC%B1%E7%82%B9%E5%A4%8D%E4%B9%A0/"
-                                title="数据结构薄弱点复习"><img
-                                class="post_bg"
-                                src="https://www.runoob.com/wp-content/uploads/2020/09/data-structure.png"
-                                onerror="this.onerror=null;this.src='/img/404.jpg'"
-                                alt="数据结构薄弱点复习"></a>
-                        </div>
-                        <div class="recent-post-info">
-                            <a
-                                class="article-title"
-                                href="/2022/12/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%96%84%E5%BC%B1%E7%82%B9%E5%A4%8D%E4%B9%A0/"
-                                title="数据结构薄弱点复习">数据结构薄弱点复习</a>
-                            <div class="article-meta-wrap">
-                                <span class="post-meta-date">
-                                    <i class="far fa-calendar-alt"></i>
-                                    <span class="article-meta-label">发表于</span>
-                                    <time
-                                        class="post-meta-date-created"
-                                        datetime="2022-12-14T14:40:46.000Z"
-                                        title="发表于 2022-12-15 01:40:46">2022-12-15</time>
-                                    <span class="article-meta-separator">|</span>
-                                    <i class="fas fa-history"></i>
-                                    <span class="article-meta-label">更新于</span>
-                                    <time
-                                        class="post-meta-date-updated"
-                                        datetime="2022-12-15T16:58:36.513Z"
-                                        title="更新于 2022-12-16 03:58:36">2022-12-16</time>
-                                </span>
-                            </div>
-                            <div class="content">数据结构图图有两种存储方式(无向图) 邻接矩阵 1代表有边 vertices = [1, 2, 3, 4,
-                                5]edges = [[0, 1, 1, 1, 1], [1, 0, 0, 1, 0], [1, 0, 0, 0, 1], [1, 1, 0, 0, 1],
-                                [1, 0, 1, 1, 0]] 邻接表 vertices = [1, 2, 3, 4, 5]edges = [[1, 2, 3, 4], [0, 3],
-                                [0, 4], [0, 1, 4], [0, 2, 3]] 空间复杂度, 邻接矩阵只与节点数N有关, O(N^2) 邻接表 适合存储稀疏图（顶点较多、边较少）；
-                                邻接矩阵 适合存储稠密图（顶点较少、边较多） 散列表感觉像是字典啊 一种非线性数据结构，通过利用 Hash 函数将指定的「键 key」映射至对应的「值
-                                value」，以实现高效的元素查找。 堆堆是一种基于「完全二叉树」的数据结构，可使用数组实现. 堆分为「大顶堆」和「小顶堆」，大（小 ...</div>
-                        </div>
-                    </div>
-                    <div class="recent-post-item">
-                        <div class="post_cover left">
-                            <a
-                                href="/2022/12/14/%E9%80%92%E5%BD%92%E9%80%86%E5%BA%8F%E6%A0%88/"
-                                title="递归逆序栈"><img
-                                class="post_bg"
-                                src="https://www.runoob.com/wp-content/uploads/2020/09/data-structure.png"
-                                onerror="this.onerror=null;this.src='/img/404.jpg'"
-                                alt="递归逆序栈"></a>
-                        </div>
-                        <div class="recent-post-info">
-                            <a
-                                class="article-title"
-                                href="/2022/12/14/%E9%80%92%E5%BD%92%E9%80%86%E5%BA%8F%E6%A0%88/"
-                                title="递归逆序栈">递归逆序栈</a>
-                            <div class="article-meta-wrap">
-                                <span class="post-meta-date">
-                                    <i class="far fa-calendar-alt"></i>
-                                    <span class="article-meta-label">发表于</span>
-                                    <time
-                                        class="post-meta-date-created"
-                                        datetime="2022-12-13T22:27:03.000Z"
-                                        title="发表于 2022-12-14 09:27:03">2022-12-14</time>
-                                    <span class="article-meta-separator">|</span>
-                                    <i class="fas fa-history"></i>
-                                    <span class="article-meta-label">更新于</span>
-                                    <time
-                                        class="post-meta-date-updated"
-                                        datetime="2022-12-14T10:37:25.437Z"
-                                        title="更新于 2022-12-14 21:37:25">2022-12-14</time>
-                                </span>
-                            </div>
-                            <div class="content">递归解决堆栈逆序 来自左神的思路, 递归还是不太熟, 后面整理下递归思路 先写一个会返回栈底元素并将其删除的递归函数
-                                # 关于参数传递, 列表等数据类型在python的函数中会是引用参数, 即在函数内改变也会影响这个参数 def getLastRemove(stack): #
-                                首先先 pop 出栈顶元素 res = stack.pop() # 此时判断栈是否为空 # 为空代表递归到底了, 此时的res为栈底元素, 直接返回,
-                                (结束递归条件) if len(stack) == 0: return res # 不为空 # 此处进行递归 last =
-                                getLastRemove(stack) # 将pop出的元素push回去 stack.append(res) # 返回上一个元素 return last
-                                不画图好难理解啊 另写一个递归reverse def reverse(stack): # 判断是否为空 if len(stack) == 0: #
-                                为空则结束递归的循环 re ...</div>
-                        </div>
-                    </div>
-                    <nav id="pagination">
-                        <div class="pagination">
-                            <span class="page-number current">1</span>
-                        </div>
-                    </nav>
-                </div>
-                <div class="aside-content" id="aside-content">
-                    <div class="card-widget card-info">
-                        <div class="is-center">
-                            <div class="avatar-img"><img
-                                src="https://pic4.zhimg.com/v2-c21606cc260d1e83272a3b3243a2ff17_r.jpg"
-                                onerror="this.onerror=null;this.src='/img/friend_404.gif'"
-                                alt="avatar"/></div>
-                            <div class="author-info__name">SuperCoko</div>
-                            <div class="author-info__description">アニメ好き</div>
-                        </div>
-                        <div class="card-info-data site-data is-center">
-                            <a href="/archives/">
-                                <div class="headline">文章</div>
-                                <div class="length-num">6</div>
-                            </a>
-                            <a href="/tags/">
-                                <div class="headline">标签</div>
-                                <div class="length-num">0</div>
-                            </a>
-                            <a href="/categories/">
-                                <div class="headline">分类</div>
-                                <div class="length-num">0</div>
-                            </a>
-                        </div>
-                        <a
-                            id="card-info-btn"
-                            target="_blank"
-                            rel="noopener"
-                            href="https://github.com/supercoko">
-                            <i class="fab fa-github"></i>
-                            <span>Follow Me</span>
-                        </a>
-                        <div class="card-info-social-icons is-center">
-                            <a
-                                class="social-icon"
-                                href="https://github.com/supercoko"
-                                target="_blank"
-                                title="Github">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a
-                                class="social-icon"
-                                href="mailto:supercoko@126.com"
-                                target="_blank"
-                                title="Email">
-                                <i class="fas fa-envelope"></i>
-                            </a>
-                            <a
-                                class="social-icon"
-                                href="https://space.bilibili.com/1963386"
-                                target="_blank"
-                                title="bilibili">
-                                <i class="fa-brands fa-bilibili"></i>
-                            </a>
-                            <a
-                                class="social-icon"
-                                href="https://www.youtube.com/channel/UCc24EY8DeKEnXi2VDFTx1Lw"
-                                target="_blank"
-                                title="Youtube">
-                                <i class="fa-brands fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card-widget card-announcement">
-                        <div class="item-headline">
-                            <i class="fas fa-bullhorn fa-shake"></i>
-                            <span>公告</span>
-                        </div>
-                        <div class="announcement_content">My Bolg Yeah!!</div>
-                    </div>
-                    <div class="card-widget">
-                        <div class="item-headline">
-                            <i class="fa-brands fa-bilibili"></i>
-                            <span>B站粉丝数</span>
-                        </div>
-                        <div class="item-content">
-                            <div>
-                                <a class="fansNum" href="javascript:;"></a>
-                            </div>
-                            <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.0/jquery.js "></script>
-                            <script>
-                                getFans();
-                                setInterval(function () {
-                                    getFans();
-                                }, 5000);
-                                function getFans() {
-                                    $.ajax({
-                                        type: "GET",
-                                        url: "https://api.bilibili.com/x/relation/stat?vmid=1963386",
-                                        dataType: "json",
-                                        timeout: 1000 * 120,
-                                        success: function (data) {
-                                            let atData = data.data;
-                                            $(".fansNum").text(atData.follower.toLocaleString());
-                                        },
-                                        error: function (error) {
-                                            console.log(error);
-                                        }
-                                    })
-                                }
-                            </script>
-                        </div>
-                    </div>
-                    <div class="sticky_layout">
-                        <div class="card-widget card-recent-post">
-                            <div class="item-headline">
-                                <i class="fas fa-history"></i>
-                                <span>最新文章</span>
-                            </div>
-                            <div class="aside-list">
-                                <div class="aside-list-item">
-                                    <a
-                                        class="thumbnail"
-                                        href="/2022/12/16/%E4%B8%8D%E6%93%85%E9%95%BF%E7%9A%84%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/"
-                                        title="不擅长的算法总结"><img
-                                        src="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png"
-                                        onerror="this.onerror=null;this.src='/img/404.jpg'"
-                                        alt="不擅长的算法总结"/></a>
-                                    <div class="content">
-                                        <a
-                                            class="title"
-                                            href="/2022/12/16/%E4%B8%8D%E6%93%85%E9%95%BF%E7%9A%84%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/"
-                                            title="不擅长的算法总结">不擅长的算法总结</a>
-                                        <time datetime="2022-12-15T19:23:00.000Z" title="发表于 2022-12-16 06:23:00">2022-12-16</time>
-                                    </div>
-                                </div>
-                                <div class="aside-list-item">
-                                    <a class="thumbnail" href="/2022/12/16/%E9%80%92%E5%BD%92/" title="递归"><img
-                                        src="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png"
-                                        onerror="this.onerror=null;this.src='/img/404.jpg'"
-                                        alt="递归"/></a>
-                                    <div class="content">
-                                        <a class="title" href="/2022/12/16/%E9%80%92%E5%BD%92/" title="递归">递归</a>
-                                        <time datetime="2022-12-15T17:17:53.000Z" title="发表于 2022-12-16 04:17:53">2022-12-16</time>
-                                    </div>
-                                </div>
-                                <div class="aside-list-item">
-                                    <a
-                                        class="thumbnail"
-                                        href="/2022/12/15/%E8%8E%B7%E5%8F%96b%E7%AB%99%E7%B2%89%E4%B8%9D%E6%95%B0%E9%87%8F/"
-                                        title="获取b站粉丝数量"><img
-                                        src="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png"
-                                        onerror="this.onerror=null;this.src='/img/404.jpg'"
-                                        alt="获取b站粉丝数量"/></a>
-                                    <div class="content">
-                                        <a
-                                            class="title"
-                                            href="/2022/12/15/%E8%8E%B7%E5%8F%96b%E7%AB%99%E7%B2%89%E4%B8%9D%E6%95%B0%E9%87%8F/"
-                                            title="获取b站粉丝数量">获取b站粉丝数量</a>
-                                        <time datetime="2022-12-15T04:37:30.000Z" title="发表于 2022-12-15 15:37:30">2022-12-15</time>
-                                    </div>
-                                </div>
-                                <div class="aside-list-item">
-                                    <a
-                                        class="thumbnail"
-                                        href="/2022/12/15/%E6%97%B6%E9%97%B4-%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/"
-                                        title="时间/空间复杂度"><img
-                                        src="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png"
-                                        onerror="this.onerror=null;this.src='/img/404.jpg'"
-                                        alt="时间/空间复杂度"/></a>
-                                    <div class="content">
-                                        <a
-                                            class="title"
-                                            href="/2022/12/15/%E6%97%B6%E9%97%B4-%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/"
-                                            title="时间/空间复杂度">时间/空间复杂度</a>
-                                        <time datetime="2022-12-14T14:41:21.000Z" title="发表于 2022-12-15 01:41:21">2022-12-15</time>
-                                    </div>
-                                </div>
-                                <div class="aside-list-item">
-                                    <a
-                                        class="thumbnail"
-                                        href="/2022/12/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%96%84%E5%BC%B1%E7%82%B9%E5%A4%8D%E4%B9%A0/"
-                                        title="数据结构薄弱点复习"><img
-                                        src="https://www.runoob.com/wp-content/uploads/2020/09/data-structure.png"
-                                        onerror="this.onerror=null;this.src='/img/404.jpg'"
-                                        alt="数据结构薄弱点复习"/></a>
-                                    <div class="content">
-                                        <a
-                                            class="title"
-                                            href="/2022/12/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%96%84%E5%BC%B1%E7%82%B9%E5%A4%8D%E4%B9%A0/"
-                                            title="数据结构薄弱点复习">数据结构薄弱点复习</a>
-                                        <time datetime="2022-12-14T14:40:46.000Z" title="发表于 2022-12-15 01:40:46">2022-12-15</time>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-widget card-archives">
-                            <div class="item-headline">
-                                <i class="fas fa-archive"></i>
-                                <span>归档</span>
-                            </div>
-                            <ul class="card-archive-list">
-                                <li class="card-archive-list-item">
-                                    <a class="card-archive-list-link" href="/archives/2022/12/">
-                                        <span class="card-archive-list-date">十二月 2022</span><span class="card-archive-list-count">6</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="card-widget card-webinfo">
-                            <div class="item-headline">
-                                <i class="fas fa-chart-line"></i>
-                                <span>网站资讯</span>
-                            </div>
-                            <div class="webinfo">
-                                <div class="webinfo-item">
-                                    <div class="item-name">文章数目 :</div>
-                                    <div class="item-count">6</div>
-                                </div>
-                                <div class="webinfo-item">
-                                    <div class="item-name">已运行时间 :</div>
-                                    <div
-                                        class="item-count"
-                                        id="runtimeshow"
-                                        data-publishdate="2022-12-11T13:00:00.000Z">
-                                        <i class="fa-solid fa-spinner fa-spin"></i>
-                                    </div>
-                                </div>
-                                <div class="webinfo-item">
-                                    <div class="item-name">本站访客数 :</div>
-                                    <div class="item-count" id="busuanzi_value_site_uv">
-                                        <i class="fa-solid fa-spinner fa-spin"></i>
-                                    </div>
-                                </div>
-                                <div class="webinfo-item">
-                                    <div class="item-name">本站总访问量 :</div>
-                                    <div class="item-count" id="busuanzi_value_site_pv">
-                                        <i class="fa-solid fa-spinner fa-spin"></i>
-                                    </div>
-                                </div>
-                                <div class="webinfo-item">
-                                    <div class="item-name">最后更新时间 :</div>
-                                    <div
-                                        class="item-count"
-                                        id="last-push-date"
-                                        data-lastpushdate="2022-12-16T17:07:44.102Z">
-                                        <i class="fa-solid fa-spinner fa-spin"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </main>
-            <footer id="footer">
-                <div id="footer-wrap">
-                    <div class="copyright">&copy;2020 - 2022 By SuperCoko</div>
-                    <div class="framework-info">
-                        <span>框架
-                        </span>
-                        <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
-                        <span class="footer-separator">|</span><span>主题
-                        </span>
-                        <a
-                            target="_blank"
-                            rel="noopener"
-                            href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a>
-                    </div>
-                    <div class="footer_custom_text">welcome to my blog</div>
-                </div>
-            </footer>
-        </div>
-        <div id="rightside">
-            <div id="rightside-config-hide">
-                <button id="darkmode" type="button" title="浅色和深色模式转换">
-                    <i class="fas fa-adjust"></i>
-                </button>
-                <button id="hide-aside-btn" type="button" title="单栏和双栏切换">
-                    <i class="fas fa-arrows-alt-h"></i>
-                </button>
-            </div>
-            <div id="rightside-config-show">
-                <button id="rightside_config" type="button" title="设置">
-                    <i class="fas fa-cog fa-spin"></i>
-                </button>
-                <button id="go-up" type="button" title="回到顶部">
-                    <i class="fas fa-arrow-up"></i>
-                </button>
-            </div>
-        </div>
-        <div>
-            <script src="/js/utils.js"></script>
-            <script src="/js/main.js"></script>
-            <script
-                src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script>
-            <div class="js-pjax"></div>
-            <script
-                async="async"
-                data-pjax="data-pjax"
-                src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-        </div>
-        <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script>
-        <script>
-            L2Dwidget.init({
-                "pluginRootPath": "live2dw/",
-                "pluginJsPath": "lib/",
-                "pluginModelPath": "assets/",
-                "tagMode": false,
-                "log": false,
-                "model": {
-                    "jsonPath": "/live2dw/assets/izumi.model.json"
-                },
-                "display": {
-                    "position": "right",
-                    "width": 150,
-                    "height": 300
-                },
-                "mobile": {
-                    "show": true
-                },
-                "react": {
-                    "opacity": 0.7
-                }
-            });
-        </script>
-    </body>
-</html>
+
+硬件
+软件
+协议
+
+
+工作方式
+
+
+边缘部分- 用户直接使用
+
+c&#x2F;s方式
+P2p方式
+
+
+核心部分
+
+为边缘部分服务
+
+
+
+
+功能组成
+
+
+通信部分 数据通信
+
+资源子网 资源共享&#x2F;数据处理
+
+
+
+计算机网络的分类
+按照范围分
+
+广域网 WAN 交换技术
+城域网 MAN
+局域网 WAN 广播技术
+个人区域网 PAN
+
+
+按照使用分
+
+公用网
+专用网
+
+
+按照交换技术分
+
+电路交换
+报文交换
+分组交换
+
+
+按照拓扑结构分
+
+总线型
+
+星型
+
+环型
+
+网状型 常用于广域网
+
+
+
+
+按照传输技术分
+
+
+
+广播式通道 共享公共通用信道
+点对点网络 使用分组存储转发和路由选择机制
+
+阶段性总结
+标准化工作
+上方为 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/12/16/%E4%B8%8D%E6%93%85%E9%95%BF%E7%9A%84%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/" title="不擅长的算法总结"><img class="post_bg" src="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="不擅长的算法总结"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/12/16/%E4%B8%8D%E6%93%85%E9%95%BF%E7%9A%84%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/" title="不擅长的算法总结">不擅长的算法总结</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-12-15T19:23:00.000Z" title="发表于 2022-12-16 06:23:00">2022-12-16</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-01-01T16:03:16.123Z" title="更新于 2023-01-02 03:03:16">2023-01-02</time></span></div><div class="content">不擅长的算法系列本内容部分来自于 作者：Krahets 链接：https://leetcode.cn/leetbook/read/illustration-of-algorithm/m5zfc1/
+作者: 五点七边 视频: https://www.youtube.com/@WuDianQiBian/videos
+递归DFS BFS字符串算法KMP什么的之类的
+二分法动态规划 (「分治思想」、「空间换时间」、「最优解」 中等困难)特点「分治」是算法中的一种基本思想，其通过将原问题分解为子问题，不断&#x3D;&#x3D;递归&#x3D;&#x3D;地将子问题分解为更小的子问题，并通过组合子问题的解来得到原问题的解。
+类似于分治算法，「动态规划」也通过组合子问题的解得到原问题的解。不同的是，适合用动态规划解决的问题具有「重叠子问题」和「最优子结构」两大特性。
+重叠子问题动态规划子问题会重叠, 即会有重复的子问题, 动态规划会保存下这些子问题的解, 需要时查表即可, 避免大量重复运算.
+最优子结构如果一个问题的最优解可以由其子问题的最优解组合构成, 且这些子问题可以独立求解, 则称为最优子结 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/12/16/%E9%80%92%E5%BD%92/" title="递归"><img class="post_bg" src="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="递归"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/12/16/%E9%80%92%E5%BD%92/" title="递归">递归</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-12-15T17:17:53.000Z" title="发表于 2022-12-16 04:17:53">2022-12-16</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-12-16T09:59:51.163Z" title="更新于 2022-12-16 20:59:51">2022-12-16</time></span></div><div class="content">递归算法思路整理定义递归：递归算法是把问题转化为规模缩小了的同类问题的子问题。然后递归调用函数（或过程）来表示问题的解。一个过程(或函数)直接或间接调用自己本身,这种过程(或函数)叫递归过程(或函数).
+递归算法有四个特性：（1）必须有可最终达到的终止条件，否则程序将陷入无穷循环（2）子问题在规模上比原问题小，或更接近终止条件；（3）子问题可通过再次递归调用求解或因满足终止条件而直接求解；（4）子问题的解应能组合为整个问题的解。
+</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/12/15/%E8%8E%B7%E5%8F%96b%E7%AB%99%E7%B2%89%E4%B8%9D%E6%95%B0%E9%87%8F/" title="获取b站粉丝数量"><img class="post_bg" src="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="获取b站粉丝数量"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/12/15/%E8%8E%B7%E5%8F%96b%E7%AB%99%E7%B2%89%E4%B8%9D%E6%95%B0%E9%87%8F/" title="获取b站粉丝数量">获取b站粉丝数量</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-12-15T04:37:30.000Z" title="发表于 2022-12-15 15:37:30">2022-12-15</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-12-26T18:54:16.115Z" title="更新于 2022-12-27 05:54:16">2022-12-27</time></span></div><div class="content">获取b站粉丝数量并显示在hexo博客中先鸽住
+🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦🐦
+API这是获取我粉丝数的api, 如需查询其他人的相关数据,只要更改vmid后的uid即可
+https://api.bilibili.com/x/relation/stat?vmid=1963386&amp;jsonp=jsonp
+返回数据
+&#123;&quot;code&quot;:0,&quot;message&quot;:&quot;0&quot;,&quot;ttl&quot;:1,&quot;data&quot;:&#123;&quot;mid&quot;:1963386,&quot;following&quot;:243,&quot;whisper&quot;:0,&quot;black&quot;:209,&quot;follower&quot;:4884&#125;&#125;
+
+ ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/12/15/%E6%97%B6%E9%97%B4-%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/" title="时间/空间复杂度"><img class="post_bg" src="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="时间/空间复杂度"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/12/15/%E6%97%B6%E9%97%B4-%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/" title="时间/空间复杂度">时间/空间复杂度</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-12-14T14:41:21.000Z" title="发表于 2022-12-15 01:41:21">2022-12-15</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-12-15T04:36:48.994Z" title="更新于 2022-12-15 15:36:48">2022-12-15</time></span></div><div class="content">时间复杂度
+常数O(1)# 运行次数与 N 大小呈常数关系，即不随输入数据大小 N*N* 的变化而变化。def algorithm(N):    a = 1    b = 2    x = a*b+N    return 1  无论 a 取多大，都与输入数据大小 N 无关，因此时间复杂度仍为 O(1) 。def algorithm(N):    count = 0    a = 10000    for i in range(a):        count += 1    return count
+
+线性O(N)循环运行次数与 N 大小呈线性关系，时间复杂度为 O(N)。def algorithm(N):    count = 0    for i in range(N):        count += 1    return count  虽然是两层循环，但第二层与 N 大小无关，因此整体仍与 N 呈线性关系。def algorithm(N):    count = 0    a = 10000    for i in range(N):        for j in rang ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/12/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%96%84%E5%BC%B1%E7%82%B9%E5%A4%8D%E4%B9%A0/" title="数据结构薄弱点复习"><img class="post_bg" src="https://www.runoob.com/wp-content/uploads/2020/09/data-structure.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据结构薄弱点复习"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/12/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%96%84%E5%BC%B1%E7%82%B9%E5%A4%8D%E4%B9%A0/" title="数据结构薄弱点复习">数据结构薄弱点复习</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-12-14T14:40:46.000Z" title="发表于 2022-12-15 01:40:46">2022-12-15</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-12-26T18:54:02.611Z" title="更新于 2022-12-27 05:54:02">2022-12-27</time></span></div><div class="content">数据结构图图有两种存储方式(无向图)
+
+邻接矩阵
+1代表有边
+vertices = [1, 2, 3, 4, 5]edges = [[0, 1, 1, 1, 1],         [1, 0, 0, 1, 0],         [1, 0, 0, 0, 1],         [1, 1, 0, 0, 1],         [1, 0, 1, 1, 0]]
+邻接表
+vertices = [1, 2, 3, 4, 5]edges = [[1, 2, 3, 4],         [0, 3],         [0, 4],         [0, 1, 4],         [0, 2, 3]]
+
+空间复杂度, 邻接矩阵只与节点数N有关, O(N^2)
+邻接表 适合存储稀疏图（顶点较多、边较少）； 邻接矩阵 适合存储稠密图（顶点较少、边较多）
+散列表感觉像是字典啊
+一种非线性数据结构，通过利用 Hash 函数将指定的「键 key」映射至对应的「值 value」，以实现高效的元素查找。
+堆堆是一种基于「完全二叉树」的数据结构，可使用数组实现.
+堆分为「大顶堆」和「小顶堆」，大（小 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/12/14/%E9%80%92%E5%BD%92%E9%80%86%E5%BA%8F%E6%A0%88/" title="递归逆序栈"><img class="post_bg" src="https://www.runoob.com/wp-content/uploads/2020/09/data-structure.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="递归逆序栈"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/12/14/%E9%80%92%E5%BD%92%E9%80%86%E5%BA%8F%E6%A0%88/" title="递归逆序栈">递归逆序栈</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-12-13T22:27:03.000Z" title="发表于 2022-12-14 09:27:03">2022-12-14</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-12-14T10:37:25.437Z" title="更新于 2022-12-14 21:37:25">2022-12-14</time></span></div><div class="content">递归解决堆栈逆序
+来自左神的思路, 递归还是不太熟, 后面整理下递归思路
+
+
+先写一个会返回栈底元素并将其删除的递归函数
+
+# 关于参数传递, 列表等数据类型在python的函数中会是引用参数, 即在函数内改变也会影响这个参数 def getLastRemove(stack):   # 首先先 pop 出栈顶元素   res = stack.pop()   # 此时判断栈是否为空   # 为空代表递归到底了, 此时的res为栈底元素, 直接返回, (结束递归条件)   if len(stack) == 0:     return res   # 不为空   # 此处进行递归   last = getLastRemove(stack)   # 将pop出的元素push回去   stack.append(res)   # 返回上一个元素   return last
+
+
+
+不画图好难理解啊
+
+
+另写一个递归reverse
+
+ def reverse(stack):   # 判断是否为空     if len(stack) == 0:       # 为空则结束递归的循环         re ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://pic4.zhimg.com/v2-c21606cc260d1e83272a3b3243a2ff17_r.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">SuperCoko</div><div class="author-info__description">アニメ好き</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/supercoko"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/supercoko" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:supercoko@126.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://space.bilibili.com/1963386" target="_blank" title="bilibili"><i class="fa-brands fa-bilibili"></i></a><a class="social-icon" href="https://www.youtube.com/channel/UCc24EY8DeKEnXi2VDFTx1Lw" target="_blank" title="Youtube"><i class="fa-brands fa-youtube"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">My Bolg Yeah!!</div></div><div class="card-widget"><div class="item-headline"><i class="fa-brands fa-bilibili"></i><span>B站粉丝数</span></div><div class="item-content"><div class="fansNum" href="javascript:;"></div> <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.0/jquery.js "></script> <script> getFans(); setInterval(function () { getFans(); }, 5000); function getFans() { $.ajax({ type:"GET", url:"https://api.bilibili.com/x/relation/stat?vmid=1963386", dataType:"json", timeout:1000 * 120, success:function (data) { let atData = data.data; $(".fansNum").text(atData.follower.toLocaleString()); }, error:function (error) { console.log(error); } }) } </script></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/12/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86%E7%82%B9/" title="计算机网络知识点"><img src="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计算机网络知识点"/></a><div class="content"><a class="title" href="/2022/12/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86%E7%82%B9/" title="计算机网络知识点">计算机网络知识点</a><time datetime="2022-12-23T08:49:31.000Z" title="发表于 2022-12-23 19:49:31">2022-12-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/16/%E4%B8%8D%E6%93%85%E9%95%BF%E7%9A%84%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/" title="不擅长的算法总结"><img src="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="不擅长的算法总结"/></a><div class="content"><a class="title" href="/2022/12/16/%E4%B8%8D%E6%93%85%E9%95%BF%E7%9A%84%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/" title="不擅长的算法总结">不擅长的算法总结</a><time datetime="2022-12-15T19:23:00.000Z" title="发表于 2022-12-16 06:23:00">2022-12-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/16/%E9%80%92%E5%BD%92/" title="递归"><img src="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="递归"/></a><div class="content"><a class="title" href="/2022/12/16/%E9%80%92%E5%BD%92/" title="递归">递归</a><time datetime="2022-12-15T17:17:53.000Z" title="发表于 2022-12-16 04:17:53">2022-12-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/15/%E8%8E%B7%E5%8F%96b%E7%AB%99%E7%B2%89%E4%B8%9D%E6%95%B0%E9%87%8F/" title="获取b站粉丝数量"><img src="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="获取b站粉丝数量"/></a><div class="content"><a class="title" href="/2022/12/15/%E8%8E%B7%E5%8F%96b%E7%AB%99%E7%B2%89%E4%B8%9D%E6%95%B0%E9%87%8F/" title="获取b站粉丝数量">获取b站粉丝数量</a><time datetime="2022-12-15T04:37:30.000Z" title="发表于 2022-12-15 15:37:30">2022-12-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/15/%E6%97%B6%E9%97%B4-%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/" title="时间/空间复杂度"><img src="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="时间/空间复杂度"/></a><div class="content"><a class="title" href="/2022/12/15/%E6%97%B6%E9%97%B4-%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/" title="时间/空间复杂度">时间/空间复杂度</a><time datetime="2022-12-14T14:41:21.000Z" title="发表于 2022-12-15 01:41:21">2022-12-15</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%9F%BA%E7%A1%80-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 1.15em; color: rgb(140, 22, 177)">基础 计算机网络</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/12/"><span class="card-archive-list-date">十二月 2022</span><span class="card-archive-list-count">7</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">7</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2022-12-11T13:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-01-01T16:16:35.541Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By SuperCoko</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">welcome to my blog</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/izumi.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body></html>
