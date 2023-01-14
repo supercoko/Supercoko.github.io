@@ -1,0 +1,474 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>刷题记录 | Coko</title><meta name="author" content="SuperCoko"><meta name="copyright" content="SuperCoko"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="leetcode 刷题记录  按照解决方法分类    2023&#x2F;1&#x2F;12 更新  看来光刷题自己不会总结效率还是太低, 感觉和背题目似的, 有些思路真的是看傻了. 最近总结了下大家在网上分享的经验和自己的体验. 我这种基础差的还是先从一般数据结构的题目入手, 经过二叉树深入理解, 之后再考虑一些回溯和动态规划的题目.  剑指OFFER排序1. (简单)剑指 Offer 40.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="刷题记录">
+<meta property="og:url" content="https://supercoko.github.io/2023/01/02/%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:site_name" content="Coko">
+<meta property="og:description" content="leetcode 刷题记录  按照解决方法分类    2023&#x2F;1&#x2F;12 更新  看来光刷题自己不会总结效率还是太低, 感觉和背题目似的, 有些思路真的是看傻了. 最近总结了下大家在网上分享的经验和自己的体验. 我这种基础差的还是先从一般数据结构的题目入手, 经过二叉树深入理解, 之后再考虑一些回溯和动态规划的题目.  剑指OFFER排序1. (简单)剑指 Offer 40.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png">
+<meta property="article:published_time" content="2023-01-01T16:18:53.000Z">
+<meta property="article:modified_time" content="2023-01-14T13:12:57.206Z">
+<meta property="article:author" content="SuperCoko">
+<meta property="article:tag" content="leetcode, 数据结构, 算法">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png"><link rel="shortcut icon" href="/img/favicon2.png"><link rel="canonical" href="https://supercoko.github.io/2023/01/02/%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: SuperCoko","link":"链接: ","source":"来源: Coko","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '刷题记录',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-01-15 00:12:57'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://pic4.zhimg.com/v2-c21606cc260d1e83272a3b3243a2ff17_r.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Coko</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">刷题记录<a class="post-edit-link" href="null_posts/刷题记录.md" title="编辑" target="_blank"><i class="fas fa-pencil-alt"></i></a></h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-01-01T16:18:53.000Z" title="发表于 2023-01-02 03:18:53">2023-01-02</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-01-14T13:12:57.206Z" title="更新于 2023-01-15 00:12:57">2023-01-15</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="刷题记录"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="leetcode-刷题记录"><a href="#leetcode-刷题记录" class="headerlink" title="leetcode 刷题记录"></a>leetcode 刷题记录</h1><hr>
+<blockquote>
+<p>按照解决方法分类</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>2023&#x2F;1&#x2F;12 更新</p>
+<hr>
+<p>看来光刷题自己不会总结效率还是太低, 感觉和背题目似的, 有些思路真的是看傻了. 最近总结了下大家在网上分享的经验和自己的体验. 我这种基础差的还是先从一般数据结构的题目入手, 经过二叉树深入理解, 之后再考虑一些回溯和动态规划的题目.</p>
+</blockquote>
+<h1 id="剑指OFFER"><a href="#剑指OFFER" class="headerlink" title="剑指OFFER"></a>剑指OFFER</h1><h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><h3 id="1-简单-剑指-Offer-40-最小的k个数"><a href="#1-简单-剑指-Offer-40-最小的k个数" class="headerlink" title="1. (简单)剑指 Offer 40. 最小的k个数"></a>1. (简单)<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/zui-xiao-de-kge-shu-lcof/">剑指 Offer 40. 最小的k个数</a></h3><p>思路1: 直接排序,返回数组前k个</p>
+<p>思路2: 利用快排序的特性, 每次执行后, 哨兵pivot左边为比其小的数, 题目要求是返回最小的k个数, 并不要求排序, 所以可以判断当哨兵数的索引位置来判断哨兵左边的有几个比其小的数, 当其等于k时,意味着此时的左边的数为k个最小的数.</p>
+<p>时间复杂度为O(N), 空间复杂度为O(logN) (执行logN层)</p>
+<h3 id="2-困难-剑指-Offer-41-数据流中的中位数"><a href="#2-困难-剑指-Offer-41-数据流中的中位数" class="headerlink" title="2. (困难)剑指 Offer 41. 数据流中的中位数"></a>2. (困难)<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/shu-ju-liu-zhong-de-zhong-wei-shu-lcof/">剑指 Offer 41. 数据流中的中位数</a></h3><p>思路1: 直接排序</p>
+<p>思路2: 利用堆的特性解决</p>
+<p><img src="/images/%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/image-20230102040752563.png" alt="image-20230102040752563"></p>
+<h2 id="搜索与回溯"><a href="#搜索与回溯" class="headerlink" title="搜索与回溯"></a>搜索与回溯</h2><h4 id="1-简单-剑指-Offer-55-I-二叉树的深度"><a href="#1-简单-剑指-Offer-55-I-二叉树的深度" class="headerlink" title="1. (简单)剑指 Offer 55 - I. 二叉树的深度"></a>1. (简单)<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/er-cha-shu-de-shen-du-lcof/">剑指 Offer 55 - I. 二叉树的深度</a></h4><p>思路1: 用DFS遍历(后序遍历)</p>
+<ul>
+<li>递归执行, 每次返回最大的子树的深度 + 1</li>
+<li>结束条件为node为none, 即此处无节点, 返回0</li>
+<li>例如 只有一个root节点,root.left为0, root.right为0, 则返回 0+1 即深度只有1</li>
+</ul>
+<p>时间复杂度 O(N)</p>
+<p>空间复杂度 O(N) ,最差情况下(树退化为链表),递归深度为N, 递归的空间是要计算的, 好像是叫栈间空间</p>
+<p>思路2: 用BFS遍历</p>
+<ul>
+<li>每遍历一层增加1</li>
+<li>利用队列先进先出的特性(理解错了, 不一定队列, 因为先左先右每影响)<ul>
+<li>添加根节点</li>
+<li>pop出来</li>
+<li>判断这个节点有没有左右子节点, 有哪个添加进去哪个</li>
+<li>此时队列里是一层的节点</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-简单-剑指-Offer-55-II-平衡二叉树"><a href="#2-简单-剑指-Offer-55-II-平衡二叉树" class="headerlink" title="2. (简单)剑指 Offer 55 - II. 平衡二叉树"></a>2. (简单)<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/ping-heng-er-cha-shu-lcof/">剑指 Offer 55 - II. 平衡二叉树</a></h3><p>思路1:求左右子树的深度, 如果任意左右子树深度之差&lt;&#x3D;1则为true</p>
+<ul>
+<li>先序, 先根后左右, 就是先判断上一层, 再判断下一层</li>
+<li>因为递归中返回的false不会终止上一层递归, 因此只能利用其返回值进行判断</li>
+</ul>
+<p>时间复杂度 O(NLogN), 每层的时间复杂度约为O(N), 有N个节点则遍历层数近似为O(logN)层</p>
+<p>空间复杂度 O(N), 存储n个递归的栈空间</p>
+<p>思路2: 后序遍历,从底到根, 先左右,后根.</p>
+<ul>
+<li><p>返回值</p>
+<ul>
+<li><p>当左右子树的深度差&lt;&#x3D;1则返回当前子树深度</p>
+</li>
+<li><p>当深度差&gt;1时, 则返回-1</p>
+</li>
+</ul>
+</li>
+<li><p>终止条件:</p>
+<ul>
+<li>当节点为空时, 返回高度0</li>
+<li>当子树深度为-1时, 代表此子树不是平衡树, 因此剪枝, 直接返回-1</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-中等-剑指-Offer-64-求1-2-…-n"><a href="#3-中等-剑指-Offer-64-求1-2-…-n" class="headerlink" title="3. (中等)剑指 Offer 64. 求1+2+…+n"></a>3. (中等)<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/qiu-12n-lcof/">剑指 Offer 64. 求1+2+…+n</a></h3><p>不能用乘除法和for while if等语句</p>
+<p>思路1 采用递归(才发现不能用if, 条件不允许使用if…)</p>
+<ul>
+<li><p>利用 与这个逻辑在程序里的特性, 即, 第一个条件不成立,直接返回false 而不去执行第二个</p>
+</li>
+<li><p>专用名词叫短路效应</p>
+</li>
+<li><p>pyhton中需要定义一个全局?变量去存储递归产生的结果值</p>
+</li>
+</ul>
+<p>时间复杂度 O(N)</p>
+<p>空间复杂度 O(N) </p>
+<h3 id="4-简单-剑指-Offer-68-I-二叉搜索树的最近公共祖先"><a href="#4-简单-剑指-Offer-68-I-二叉搜索树的最近公共祖先" class="headerlink" title="4. (简单) 剑指 Offer 68 - I. 二叉搜索树的最近公共祖先"></a>4. (简单) <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof/">剑指 Offer 68 - I. 二叉搜索树的最近公共祖先</a></h3><p>这题居然是简单吗???! </p>
+<p>祖先定义:</p>
+<ul>
+<li>p在root的子树中, 或这p&#x3D;root, 则root为p的祖先</li>
+</ul>
+<p>最近公共祖先定义:</p>
+<ul>
+<li>root为p,q某公共祖先</li>
+<li>其左, 右子节点都不是p,q公共祖先, 则称root为最近的公共祖先</li>
+</ul>
+<p>若root为p,q 最近公共祖先</p>
+<ul>
+<li>p,q 在root 子树, 且分列root的不同侧</li>
+<li>p&#x3D;root, 且q在root子树</li>
+<li>q&#x3D;root, 且p钻root子树</li>
+</ul>
+<p>此树为二叉搜索树, 左树小, 右树大</p>
+<p>思路1: 迭代</p>
+<ul>
+<li>节点为空则跳出</li>
+<li>p,q都在右子树, 则遍历节点右子树</li>
+<li>都在左子树则遍历左子树</li>
+<li>否则, 说明找到了公共祖先root</li>
+</ul>
+<p>时间O(N)</p>
+<p>空间O(1)</p>
+<p>思路2: 递归</p>
+<p>时间O(N) 最优为logN(满二叉树), 最差为O树退化为链表</p>
+<p>空间O(N), 树退化为来拿表, 迭代深度为N(深度等于节点数)</p>
+<h3 id="5-简单-剑指-Offer-68-II-二叉树的最近公共祖先"><a href="#5-简单-剑指-Offer-68-II-二叉树的最近公共祖先" class="headerlink" title="5. (简单) 剑指 Offer 68 - II. 二叉树的最近公共祖先"></a>5. (简单) <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof/">剑指 Offer 68 - II. 二叉树的最近公共祖先</a></h3><p>所以说这题怎么就简单了…</p>
+<p>最近公共祖先, 以下情况之一</p>
+<ol>
+<li>p, q  在root 子树中,且在异侧(一左一右)</li>
+<li>p &#x3D; root 且 q在root的子树</li>
+<li>q &#x3D; root 且 p在root的子树</li>
+</ol>
+<h2 id="分治"><a href="#分治" class="headerlink" title="分治"></a>分治</h2><h3 id="1-中等-剑指-Offer-07-重建二叉树"><a href="#1-中等-剑指-Offer-07-重建二叉树" class="headerlink" title="1. (中等)剑指 Offer 07. 重建二叉树"></a>1. (中等)<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/zhong-jian-er-cha-shu-lcof/">剑指 Offer 07. 重建二叉树</a></h3><p>前序 根 左 右</p>
+<p>中序 左 根 右</p>
+<p>通过前序遍历 找到根节点在中序遍历的位置, 从而划分左右子树的区间</p>
+<p>获取左右子树的大小后, 可以在前序遍历数组中找到子树的根.</p>
+<h3 id="2-中等-剑指-Offer-16-数值的整数次方"><a href="#2-中等-剑指-Offer-16-数值的整数次方" class="headerlink" title="2. (中等)剑指 Offer 16. 数值的整数次方"></a>2. (中等)<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/shu-zhi-de-zheng-shu-ci-fang-lcof/">剑指 Offer 16. 数值的整数次方</a></h3><p>快速幂法, 降低时间复杂度</p>
+<p>O(N)-&gt;O(logN)</p>
+<p>二进制</p>
+<ul>
+<li>$n &#x3D; 1b_1+2b_2+4b_3$…</li>
+<li>$x^n &#x3D; x^{1b_1+2b_2+4b_3…}&#x3D;x^{1b_1}x^{2b_2}x^{4b_3}…$</li>
+<li>&amp;1表示取二进制最右一位的值</li>
+<li>n&gt;&gt;1右移一位, 删除最右一位</li>
+<li>n&#x2F;&#x2F;2 等价于 n&gt;&gt;1</li>
+<li>n%2 等价于 n&amp;1</li>
+<li><img src="/images/%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/image-20230105182300660.png" alt="image-20230105182300660"></li>
+<li></li>
+</ul>
+<h3 id="3-剑指-Offer-33-二叉搜索树的后序遍历序列"><a href="#3-剑指-Offer-33-二叉搜索树的后序遍历序列" class="headerlink" title="3. 剑指 Offer 33. 二叉搜索树的后序遍历序列"></a>3. <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/er-cha-sou-suo-shu-de-hou-xu-bian-li-xu-lie-lcof/">剑指 Offer 33. 二叉搜索树的后序遍历序列</a></h3><p>递归分治理解了</p>
+<p>单调栈不太理解(空间换时间)</p>
+<h2 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h2><h3 id="1-简单-剑指-Offer-65-不用加减乘除做加法"><a href="#1-简单-剑指-Offer-65-不用加减乘除做加法" class="headerlink" title="1. (简单)剑指 Offer 65. 不用加减乘除做加法"></a>1. (简单)<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/bu-yong-jia-jian-cheng-chu-zuo-jia-fa-lcof/">剑指 Offer 65. 不用加减乘除做加法</a></h3><p>简单个锤子</p>
+<p><img src="/images/%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/image-20230106045905036.png" alt="image-20230106045905036"></p>
+<p>无进位和 $n &#x3D; a \oplus b$</p>
+<p>进位值 $c&#x3D; a &amp; b$ &lt;&lt; 1 进位后左移动一位</p>
+<p>s &#x3D; a + b &#x3D;&gt; s &#x3D; n + c</p>
+<p>循环求n和c, 直到 c &#x3D; 0 此时 s  &#x3D; n</p>
+<p>现在对补码还是有点懵, 总结下就是补码可以做到加减法一致</p>
+<p>时空间复杂度皆为 O(1)</p>
+<p>python的补码机制比较特殊, 输出负数时会输出 负号 + 原码</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">hex</span>(<span class="number">1</span> &amp; <span class="number">0xffffffff</span>) <span class="comment"># 正数补码</span></span><br><span class="line"><span class="built_in">hex</span>(-<span class="number">1</span> &amp; <span class="number">0xffffffff</span>) <span class="comment"># 负数补码</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>正数的原码, 反码, 补码一致</p>
+<p>负数的反码为原码按位取反(除符号位), 补码是反码+1 (负数的符号位是1)</p>
+<p>(负数)补码变原码 为 符号位不变 按位取反 再加1</p>
+<p>python中的按位取反, (计算机都是用补码进行操作的)</p>
+<p><del>python中的数默认是 4字节 32 bit</del></p>
+<p>python中没有位数限制….是题目要求的不会超过32位…搞错了 尴尬</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">bin</span>(<span class="number">5</span>)</span><br><span class="line"><span class="comment"># 0b101</span></span><br><span class="line"><span class="comment"># 实际是 </span></span><br><span class="line">0b <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0</span>101</span><br><span class="line"><span class="comment"># 计算机中是补码</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 按位取反</span></span><br><span class="line">0b <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1010</span></span><br><span class="line"><span class="comment"># 转换为 原码</span></span><br><span class="line">0b <span class="number">1000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0</span>101 + <span class="number">0b1</span></span><br><span class="line">0b <span class="number">1000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> 0110</span><br><span class="line"><span class="comment"># 十进制数为</span></span><br><span class="line">-<span class="number">6</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>PS. 只有运算过程按照补码来, 直接与结果还是按照原码??</p>
+<h3 id="2-简单-剑指-Offer-15-二进制中1的个数"><a href="#2-简单-剑指-Offer-15-二进制中1的个数" class="headerlink" title="2. (简单)剑指 Offer 15. 二进制中1的个数"></a>2. (简单)<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/er-jin-zhi-zhong-1de-ge-shu-lcof/?envType=study-plan&id=lcof&plan=lcof&plan_progress=y0aqjmh">剑指 Offer 15. 二进制中1的个数</a></h3><p>n&amp;(n-1) 是真的6666</p>
+<p>$n&#x3D; 000100101$</p>
+<p>$n-1 &#x3D;000100100 $</p>
+<p>$n-2&#x3D; 000100011$</p>
+<p>n&amp;(n-1) 作用是消除n最右边的1</p>
+<p>例如</p>
+<p>n&amp;(n-1) &#x3D; 000100100</p>
+<p>n&amp;(n-1)&amp;(n-2) &#x3D; 00100000</p>
+<p>一次消除一个1, 有几个1就消除几次</p>
+<h3 id="3-中等-剑指-Offer-56-I-数组中数字出现的次数"><a href="#3-中等-剑指-Offer-56-I-数组中数字出现的次数" class="headerlink" title="3. (中等)剑指 Offer 56 - I. 数组中数字出现的次数"></a>3. (中等)<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof/?envType=study-plan&id=lcof&plan=lcof&plan_progress=y0aqjmh">剑指 Offer 56 - I. 数组中数字出现的次数</a></h3><p>异或满足交换律</p>
+<p>$a\oplus b &#x3D; b\oplus a$</p>
+<p>且 $a\oplus a &#x3D; 0$</p>
+<p>m 存储 $x\oplus y$ 从右往左数第一个不同的位</p>
+<p>通过此将其划分为两部分</p>
+<p>和m相与得1的子数组</p>
+<p>和m想与得0的子数组</p>
+<h3 id="4-中等-剑指-Offer-56-II-数组中数字出现的次数-II"><a href="#4-中等-剑指-Offer-56-II-数组中数字出现的次数-II" class="headerlink" title="4. (中等)剑指 Offer 56 - II. 数组中数字出现的次数 II"></a>4. (中等)<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-ii-lcof/?envType=study-plan&id=lcof&plan=lcof&plan_progress=y0aqjmh">剑指 Offer 56 - II. 数组中数字出现的次数 II</a></h3><p>学了个新符号</p>
+<p>无符号位移</p>
+<p>&gt;&gt;&gt; 和 &lt;&lt;&lt;</p>
+<h2 id="数学"><a href="#数学" class="headerlink" title="数学"></a>数学</h2><h3 id="1-简单-剑指-Offer-39-数组中出现次数超过一半的数字"><a href="#1-简单-剑指-Offer-39-数组中出现次数超过一半的数字" class="headerlink" title="1. (简单)剑指 Offer 39. 数组中出现次数超过一半的数字"></a>1. (简单)<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/shu-zu-zhong-chu-xian-ci-shu-chao-guo-yi-ban-de-shu-zi-lcof/?envType=study-plan&id=lcof&plan=lcof&plan_progress=y0aqjmh">剑指 Offer 39. 数组中出现次数超过一半的数字</a></h3><p><strong>python排序的底层实现就是归并排序，只是使用了Python无法编写的底层实现，从而避免了Python本身附加的大量开销,速度比我们自己写的归并排序要快很多（10~20倍）,所以说我们一般排序都尽量使用sorted和sort</strong></p>
+<p>排序找重点, 根据排序算法的复杂度而变</p>
+<p>摩尔投票法: 投票法简单来说就是不同则抵消，占半数以上的数字必然留到最后</p>
+<h3 id="2-中等-剑指-Offer-66-构建乘积数组"><a href="#2-中等-剑指-Offer-66-构建乘积数组" class="headerlink" title="2. (中等)剑指 Offer 66. 构建乘积数组"></a>2. (中等)<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/gou-jian-cheng-ji-shu-zu-lcof/">剑指 Offer 66. 构建乘积数组</a></h3><p>不能用除法 555</p>
+<p><img src="/images/%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/image-20230106223948803.png" alt="image-20230106223948803"></p>
+<p><img src="/images/%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/image-20230106223958427.png" alt="image-20230106223958427"></p>
+<p>这个上下三角是真的妙</p>
+<h3 id="3-中等-剑指-Offer-14-I-剪绳子"><a href="#3-中等-剑指-Offer-14-I-剪绳子" class="headerlink" title="3. (中等)剑指 Offer 14- I. 剪绳子"></a>3. (中等)<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/jian-sheng-zi-lcof/?envType=study-plan&id=lcof&plan=lcof&plan_progress=y0aqjmh">剑指 Offer 14- I. 剪绳子</a></h3><blockquote>
+<p>Python 中常见有三种幂计算函数： ** 和 pow() 的时间复杂度均为 O(log a) ；而 math.pow() 始终调用 C 库的 pow() 函数，其执行浮点取幂，时间复杂度为 O(1)</p>
+</blockquote>
+<p>算数集合平均值不等式 等号成立时, 当且仅当 $n_1&#x3D; n_2 &#x3D; …&#x3D;n_{a}$</p>
+<p>$\frac{n_1+ n_2 + …+n_{a}}{a} \geq \sqrt[a]{n_1n_2…n+a}$</p>
+<p>纯数学推导了属于是</p>
+<p>latex用不太熟, 手写一遍吧</p>
+<p><img src="/images/%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/IMG_15230255E15C-1.jpeg" alt="IMG_15230255E15C-1"></p>
+<p>贪心算法!!!</p>
+<p>由上可知</p>
+<ul>
+<li>最优的分段大小为3, 次优的为2</li>
+<li>利用dp存储当前数能得到的值</li>
+<li>dp[1] &#x3D; 1</li>
+<li>dp[2] &#x3D; 2</li>
+<li>dp[3] &#x3D; 3</li>
+<li>dp[4] &#x3D; max(dp[2]*2, dp[1]*3)</li>
+<li>dp[i] &#x3D; max(dp[i-2]*2, dp[i-3]*3)</li>
+</ul>
+<h3 id="4-简单-剑指-Offer-57-II-和为s的连续正数序列"><a href="#4-简单-剑指-Offer-57-II-和为s的连续正数序列" class="headerlink" title="4. (简单)剑指 Offer 57 - II. 和为s的连续正数序列"></a>4. (简单)<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/he-wei-sde-lian-xu-zheng-shu-xu-lie-lcof/?envType=study-plan&id=lcof&plan=lcof&plan_progress=y0aqjmh">剑指 Offer 57 - II. 和为s的连续正数序列</a></h3><p>简单个锤子</p>
+<p>循环操作给我绕懵了</p>
+<p>做出来了个 时间复杂度 O(N)</p>
+<p>滑动窗口的实现我想复杂了</p>
+<p>只用两个指针即可</p>
+<p>边界判定为左指针大小超过目标值一半</p>
+<h3 id="5-简单-剑指-Offer-62-圆圈中最后剩下的数字"><a href="#5-简单-剑指-Offer-62-圆圈中最后剩下的数字" class="headerlink" title="5. (简单)剑指 Offer 62. 圆圈中最后剩下的数字"></a>5. (简单)<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/yuan-quan-zhong-zui-hou-sheng-xia-de-shu-zi-lcof/?envType=study-plan&id=lcof&plan=lcof&plan_progress=y0aqjmh">剑指 Offer 62. 圆圈中最后剩下的数字</a></h3><p>简单个👻啊</p>
+<p>用链表解决时间复杂度过于复杂</p>
+<p>O(NM)</p>
+<p>动态规划解决</p>
+<p>约瑟夫环</p>
+<p>!!!</p>
+<p>(A + B) % C &#x3D;  (A % C + B % C ) % C</p>
+<p>被删除的数字为 (m - 1)%n</p>
+<p>有n个数</p>
+<p>0, 1, 2, … n-1</p>
+<p>第m个数为</p>
+<p>m - 1</p>
+<p>又因为如果m-1大于n时, 会从头开始</p>
+<p>所以删除的数字为 (m-1)% n </p>
+<p>t &#x3D; m % n</p>
+<p>(m-1)%n &#x3D; (m%n - 1%n)%n &#x3D; (t - 1%n)%n</p>
+<p>因为等于小于的数取余数等于其吱声</p>
+<p>e.g. 1 % 2 &#x3D; 1, 3%4&#x3D;3</p>
+<p>上式 &#x3D; (t - 1) % n &#x3D; t - 1</p>
+<p>因此可得, t - 1 为被删除的数</p>
+<p><em>t</em>,<em>t</em>+1,<em>t</em>+2,…,0,1,…,<em>t</em>−3,<em>t</em>−2</p>
+<table>
+<thead>
+<tr>
+<th>[n - 1, m] 问题</th>
+<th>-&gt;</th>
+<th>[n , m] 问题删除后</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>-&gt;</td>
+<td>t + 0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>-&gt;</td>
+<td>t + 1</td>
+</tr>
+<tr>
+<td>…</td>
+<td>-&gt;</td>
+<td></td>
+</tr>
+<tr>
+<td>n-2</td>
+<td>-&gt;</td>
+<td>t-2</td>
+</tr>
+</tbody></table>
+<p>设[n - 1, m] 问题, 某数字为x, </p>
+<table>
+<thead>
+<tr>
+<th>x</th>
+<th>-&gt;</th>
+<th>(x+t)%n</th>
+</tr>
+</thead>
+</table>
+<p>后面就晕了</p>
+<p>…</p>
+<p>因为 n-1 里的 x 等于 n 里的  (x+t)%n</p>
+<p>所以 n-1的解 f(n-1) 对应 n 里的 (f(n-1)+t)%n</p>
+<h2 id="模拟"><a href="#模拟" class="headerlink" title="模拟"></a>模拟</h2><h3 id="1-简单-剑指-Offer-29-顺时针打印矩阵"><a href="#1-简单-剑指-Offer-29-顺时针打印矩阵" class="headerlink" title="1. (简单)剑指 Offer 29. 顺时针打印矩阵"></a>1. (简单)<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/shun-shi-zhen-da-yin-ju-zhen-lcof/?envType=study-plan&id=lcof&plan=lcof&plan_progress=y0aqjmh">剑指 Offer 29. 顺时针打印矩阵</a></h3><p>运行一定是 </p>
+<p>$\rarr, \darr, \larr, \uarr$ 依次循环运行</p>
+<p>设置四个边的边界值, 向右依次, 上边界 +1, 向下一次, 右边界 -1, 向左, 底边界 +1, 向上, 左边界 +1, 当任意一个边界越界之后 终止循环</p>
+<h3 id="2-中等-剑指-Offer-31-栈的压入、弹出序列"><a href="#2-中等-剑指-Offer-31-栈的压入、弹出序列" class="headerlink" title="2. (中等)剑指 Offer 31. 栈的压入、弹出序列"></a>2. (中等)<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/zhan-de-ya-ru-dan-chu-xu-lie-lcof/?envType=study-plan&id=lcof&plan=lcof&plan_progress=y0aqjmh">剑指 Offer 31. 栈的压入、弹出序列</a></h3><p>模拟栈弹出的操作, 如果最后按照popped 能够完全弹出, 则成立</p>
+<p>首先按照pushed的顺序push进 栈</p>
+<p>同时检测</p>
+<p>​	当栈不为空, 且栈顶和当前索引下popped的 元素相	等时, 弹出stack, 索引加1,  </p>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><h3 id="1-中等-剑指-Offer-20-表示数值的字符串"><a href="#1-中等-剑指-Offer-20-表示数值的字符串" class="headerlink" title="1. (中等)剑指 Offer 20. 表示数值的字符串"></a>1. (中等)<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/biao-shi-shu-zhi-de-zi-fu-chuan-lcof/?envType=study-plan&id=lcof&plan=lcof&plan_progress=y0aqjmh">剑指 Offer 20. 表示数值的字符串</a></h3><p>有限状态机</p>
+<p><img src="/images/%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/image-20230110094305811.png" alt="image-20230110094305811"></p>
+<h3 id="2-中等-面试题67-把字符串转换成整数"><a href="#2-中等-面试题67-把字符串转换成整数" class="headerlink" title="2. (中等)面试题67. 把字符串转换成整数"></a>2. (中等)<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/ba-zi-fu-chuan-zhuan-huan-cheng-zheng-shu-lcof/?envType=study-plan&id=lcof&plan=lcof&plan_progress=y0aqjmh">面试题67. 把字符串转换成整数</a></h3><p>循环判断 这题倒是不难</p>
+<p>后面看看大佬怎么优化的</p>
+<h2 id="每日一题"><a href="#每日一题" class="headerlink" title="每日一题"></a>每日一题</h2><h3 id="2283-判断一个数的数字计数是否等于数位的值"><a href="#2283-判断一个数的数字计数是否等于数位的值" class="headerlink" title="2283. 判断一个数的数字计数是否等于数位的值"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/check-if-number-has-equal-digit-count-and-digit-value/">2283. 判断一个数的数字计数是否等于数位的值</a></h3><p>简单题, 就是有点绕</p>
+<h3 id="1807-替换字符串中的括号内容"><a href="#1807-替换字符串中的括号内容" class="headerlink" title="1807. 替换字符串中的括号内容"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/evaluate-the-bracket-pairs-of-a-string/">1807. 替换字符串中的括号内容</a></h3><p>中等题里的简单的题</p>
+<p>python 的知识点</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">in</span>: <span class="built_in">dict</span>([[<span class="string">&quot;name&quot;</span>,<span class="string">&quot;bob&quot;</span>],[<span class="string">&quot;age&quot;</span>,<span class="string">&quot;two&quot;</span>]])</span><br><span class="line">out: &#123;<span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;bob&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="string">&#x27;two&#x27;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">enumerate</span>(<span class="string">&#x27;abc&#x27;</span>):</span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(i)</span><br><span class="line">...</span><br><span class="line">(<span class="number">0</span>, <span class="string">&#x27;a&#x27;</span>)</span><br><span class="line">(<span class="number">1</span>, <span class="string">&#x27;b&#x27;</span>)</span><br><span class="line">(<span class="number">2</span>, <span class="string">&#x27;c&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>思路是简单的, 当遍历的字符串不在 “()”内时, 添加当前字符, 如果是的话, 找出”()” 内字符串应被替换为什么</p>
+<h3 id="2287-重排字符形成目标字符串"><a href="#2287-重排字符形成目标字符串" class="headerlink" title="2287. 重排字符形成目标字符串"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/rearrange-characters-to-make-target-string/">2287. 重排字符形成目标字符串</a></h3><p>简单题, 这是为过年做准备呢是吧, 2333</p>
+<h1 id="按照labuladong的思路去解题"><a href="#按照labuladong的思路去解题" class="headerlink" title="按照labuladong的思路去解题"></a>按照labuladong的思路去解题</h1><hr>
+<h2 id="链表算法"><a href="#链表算法" class="headerlink" title="链表算法"></a>链表算法</h2><blockquote>
+<p>合并,分隔链表</p>
+</blockquote>
+<h3 id="21-合并两个有序链表"><a href="#21-合并两个有序链表" class="headerlink" title="21. 合并两个有序链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/merge-two-sorted-lists/">21. 合并两个有序链表</a></h3><p>简单题</p>
+<p>开一下思路</p>
+<h3 id="86-分隔链表"><a href="#86-分隔链表" class="headerlink" title="86. 分隔链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/partition-list/">86. 分隔链表</a></h3><p>中等题</p>
+<p>思路是创建两个虚拟节点(个人理解的就是新增一个无用的头节点)</p>
+<h3 id="23-合并K个升序链表"><a href="#23-合并K个升序链表" class="headerlink" title="23. 合并K个升序链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/merge-k-sorted-lists/">23. 合并K个升序链表</a></h3><p>困难题</p>
+<p>用优先队列(堆)来解决</p>
+<p>python中 tuple&#x2F;list&#x2F;set 比较大小, 首先对比</p>
+<p>这里详细讲解了二叉堆实现的优先队列(一种数据结构)</p>
+<p>在后续章节有讲解, 现在先按照顺序做题, 后面在去复习</p>
+<h3 id="19-删除链表的倒数第-N-个结点"><a href="#19-删除链表的倒数第-N-个结点" class="headerlink" title="19. 删除链表的倒数第 N 个结点"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-nth-node-from-end-of-list/">19. 删除链表的倒数第 N 个结点</a></h3><p>中等题</p>
+<p>双指针</p>
+<p>链表长度为 S</p>
+<p>先让一个指正从头节点开始走n次, 此时其指向第 n+1 个节点</p>
+<p>然后再让一个指针指向 头结点, 然后两个节点同步向下走, 直到快的节点(之前走过n步的节点)走到结尾None(Null) 即 第 S + 1个节点</p>
+<p>慢节点和快节点恒定差n个节点, 此时慢节点指向 S + 1 - n 即 第 倒数第n个节点, 此时获取此节点前一个节点, 让其指向下一个节点即可, 此时可用虚拟节点来解决</p>
+<blockquote>
+<p>快慢指针</p>
+</blockquote>
+<h3 id="876-链表的中间结点"><a href="#876-链表的中间结点" class="headerlink" title="876. 链表的中间结点"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/middle-of-the-linked-list/">876. 链表的中间结点</a></h3><p>简单题</p>
+<p>快慢指针</p>
+<p>快指针一次走两步, 慢指针一次走一步</p>
+<p>while循环还利用了短路效应, 此时当fast节点为空时, 就不会进入fast.next从而引发报错</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> fast <span class="keyword">and</span> fast.<span class="built_in">next</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>数学模拟</p>
+<p>$v_a &#x3D; 1 m&#x2F;s, v_b &#x3D; 2m&#x2F;s$</p>
+<p>当b停止时, 行驶了3s</p>
+<p>a到3m处</p>
+<p>b到6m处</p>
+<p>此方法当链表中点有两个时, 会指向靠后的那一个, 如 有6个节点, 慢指针最后会指向第4个节点</p>
+<h3 id="141-环形链表"><a href="#141-环形链表" class="headerlink" title="141. 环形链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/linked-list-cycle/">141. 环形链表</a></h3><p>简单题</p>
+<p>还是快慢指针</p>
+<p>如果有环, 则慢指针最终会被快指针追上</p>
+<h3 id="142-环形链表-II"><a href="#142-环形链表-II" class="headerlink" title="142. 环形链表 II"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/linked-list-cycle-ii/">142. 环形链表 II</a></h3><p>中等题</p>
+<p>哈希法 </p>
+<p>存放节点到set中, 如果有重复的, 就代表那个点为起始点</p>
+<p>快慢指针法</p>
+<p>快慢第一次相遇后, 让其中一个指向head, 然后一次增加1</p>
+<p><img src="/images/%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/image-20230114041146314.png" alt="image-20230114041146314"></p>
+<h3 id="160-相交链表"><a href="#160-相交链表" class="headerlink" title="160. 相交链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/intersection-of-two-linked-lists/">160. 相交链表</a></h3><p>简单题</p>
+<p>我之前让其为 None时跳转到另一头节点, 但忽略了没有交点时 两个指针同时为None的情况(判定条件为两个不相等就循环) , 只要为None了我就交换到头节点, 直接死循环 2333.</p>
+<p>应该让 指向下一节点和 指向对方头结点 一次循环只能执行其一</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="supercoko.github.io">SuperCoko</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://supercoko.github.io/2023/01/02/%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/">https://supercoko.github.io/2023/01/02/刷题记录/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://supercoko.github.io" target="_blank">Coko</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/leetcode-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%AE%97%E6%B3%95/">leetcode, 数据结构, 算法</a></div><div class="post_share"><div class="social-share" data-image="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/01/04/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"><img class="prev-cover" src="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">操作系统</div></div></a></div><div class="next-post pull-right"><a href="/2022/12/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86%E7%82%B9/"><img class="next-cover" src="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">计算机网络知识点</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#leetcode-%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95"><span class="toc-number">1.</span> <span class="toc-text">leetcode 刷题记录</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%91%E6%8C%87OFFER"><span class="toc-number">2.</span> <span class="toc-text">剑指OFFER</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F"><span class="toc-number">2.1.</span> <span class="toc-text">排序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%AE%80%E5%8D%95-%E5%89%91%E6%8C%87-Offer-40-%E6%9C%80%E5%B0%8F%E7%9A%84k%E4%B8%AA%E6%95%B0"><span class="toc-number">2.1.1.</span> <span class="toc-text">1. (简单)剑指 Offer 40. 最小的k个数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%9B%B0%E9%9A%BE-%E5%89%91%E6%8C%87-Offer-41-%E6%95%B0%E6%8D%AE%E6%B5%81%E4%B8%AD%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0"><span class="toc-number">2.1.2.</span> <span class="toc-text">2. (困难)剑指 Offer 41. 数据流中的中位数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%9C%E7%B4%A2%E4%B8%8E%E5%9B%9E%E6%BA%AF"><span class="toc-number">2.2.</span> <span class="toc-text">搜索与回溯</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E7%AE%80%E5%8D%95-%E5%89%91%E6%8C%87-Offer-55-I-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%B7%B1%E5%BA%A6"><span class="toc-number">2.2.0.1.</span> <span class="toc-text">1. (简单)剑指 Offer 55 - I. 二叉树的深度</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%AE%80%E5%8D%95-%E5%89%91%E6%8C%87-Offer-55-II-%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="toc-number">2.2.1.</span> <span class="toc-text">2. (简单)剑指 Offer 55 - II. 平衡二叉树</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%B8%AD%E7%AD%89-%E5%89%91%E6%8C%87-Offer-64-%E6%B1%821-2-%E2%80%A6-n"><span class="toc-number">2.2.2.</span> <span class="toc-text">3. (中等)剑指 Offer 64. 求1+2+…+n</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E7%AE%80%E5%8D%95-%E5%89%91%E6%8C%87-Offer-68-I-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88"><span class="toc-number">2.2.3.</span> <span class="toc-text">4. (简单) 剑指 Offer 68 - I. 二叉搜索树的最近公共祖先</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E7%AE%80%E5%8D%95-%E5%89%91%E6%8C%87-Offer-68-II-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88"><span class="toc-number">2.2.4.</span> <span class="toc-text">5. (简单) 剑指 Offer 68 - II. 二叉树的最近公共祖先</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E6%B2%BB"><span class="toc-number">2.3.</span> <span class="toc-text">分治</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%B8%AD%E7%AD%89-%E5%89%91%E6%8C%87-Offer-07-%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="toc-number">2.3.1.</span> <span class="toc-text">1. (中等)剑指 Offer 07. 重建二叉树</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%B8%AD%E7%AD%89-%E5%89%91%E6%8C%87-Offer-16-%E6%95%B0%E5%80%BC%E7%9A%84%E6%95%B4%E6%95%B0%E6%AC%A1%E6%96%B9"><span class="toc-number">2.3.2.</span> <span class="toc-text">2. (中等)剑指 Offer 16. 数值的整数次方</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%89%91%E6%8C%87-Offer-33-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97"><span class="toc-number">2.3.3.</span> <span class="toc-text">3. 剑指 Offer 33. 二叉搜索树的后序遍历序列</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%8D%E8%BF%90%E7%AE%97"><span class="toc-number">2.4.</span> <span class="toc-text">位运算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%AE%80%E5%8D%95-%E5%89%91%E6%8C%87-Offer-65-%E4%B8%8D%E7%94%A8%E5%8A%A0%E5%87%8F%E4%B9%98%E9%99%A4%E5%81%9A%E5%8A%A0%E6%B3%95"><span class="toc-number">2.4.1.</span> <span class="toc-text">1. (简单)剑指 Offer 65. 不用加减乘除做加法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%AE%80%E5%8D%95-%E5%89%91%E6%8C%87-Offer-15-%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD1%E7%9A%84%E4%B8%AA%E6%95%B0"><span class="toc-number">2.4.2.</span> <span class="toc-text">2. (简单)剑指 Offer 15. 二进制中1的个数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%B8%AD%E7%AD%89-%E5%89%91%E6%8C%87-Offer-56-I-%E6%95%B0%E7%BB%84%E4%B8%AD%E6%95%B0%E5%AD%97%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0"><span class="toc-number">2.4.3.</span> <span class="toc-text">3. (中等)剑指 Offer 56 - I. 数组中数字出现的次数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E4%B8%AD%E7%AD%89-%E5%89%91%E6%8C%87-Offer-56-II-%E6%95%B0%E7%BB%84%E4%B8%AD%E6%95%B0%E5%AD%97%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0-II"><span class="toc-number">2.4.4.</span> <span class="toc-text">4. (中等)剑指 Offer 56 - II. 数组中数字出现的次数 II</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%AD%A6"><span class="toc-number">2.5.</span> <span class="toc-text">数学</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%AE%80%E5%8D%95-%E5%89%91%E6%8C%87-Offer-39-%E6%95%B0%E7%BB%84%E4%B8%AD%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0%E8%B6%85%E8%BF%87%E4%B8%80%E5%8D%8A%E7%9A%84%E6%95%B0%E5%AD%97"><span class="toc-number">2.5.1.</span> <span class="toc-text">1. (简单)剑指 Offer 39. 数组中出现次数超过一半的数字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%B8%AD%E7%AD%89-%E5%89%91%E6%8C%87-Offer-66-%E6%9E%84%E5%BB%BA%E4%B9%98%E7%A7%AF%E6%95%B0%E7%BB%84"><span class="toc-number">2.5.2.</span> <span class="toc-text">2. (中等)剑指 Offer 66. 构建乘积数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%B8%AD%E7%AD%89-%E5%89%91%E6%8C%87-Offer-14-I-%E5%89%AA%E7%BB%B3%E5%AD%90"><span class="toc-number">2.5.3.</span> <span class="toc-text">3. (中等)剑指 Offer 14- I. 剪绳子</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E7%AE%80%E5%8D%95-%E5%89%91%E6%8C%87-Offer-57-II-%E5%92%8C%E4%B8%BAs%E7%9A%84%E8%BF%9E%E7%BB%AD%E6%AD%A3%E6%95%B0%E5%BA%8F%E5%88%97"><span class="toc-number">2.5.4.</span> <span class="toc-text">4. (简单)剑指 Offer 57 - II. 和为s的连续正数序列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E7%AE%80%E5%8D%95-%E5%89%91%E6%8C%87-Offer-62-%E5%9C%86%E5%9C%88%E4%B8%AD%E6%9C%80%E5%90%8E%E5%89%A9%E4%B8%8B%E7%9A%84%E6%95%B0%E5%AD%97"><span class="toc-number">2.5.5.</span> <span class="toc-text">5. (简单)剑指 Offer 62. 圆圈中最后剩下的数字</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E6%8B%9F"><span class="toc-number">2.6.</span> <span class="toc-text">模拟</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%AE%80%E5%8D%95-%E5%89%91%E6%8C%87-Offer-29-%E9%A1%BA%E6%97%B6%E9%92%88%E6%89%93%E5%8D%B0%E7%9F%A9%E9%98%B5"><span class="toc-number">2.6.1.</span> <span class="toc-text">1. (简单)剑指 Offer 29. 顺时针打印矩阵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%B8%AD%E7%AD%89-%E5%89%91%E6%8C%87-Offer-31-%E6%A0%88%E7%9A%84%E5%8E%8B%E5%85%A5%E3%80%81%E5%BC%B9%E5%87%BA%E5%BA%8F%E5%88%97"><span class="toc-number">2.6.2.</span> <span class="toc-text">2. (中等)剑指 Offer 31. 栈的压入、弹出序列</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">2.7.</span> <span class="toc-text">字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%B8%AD%E7%AD%89-%E5%89%91%E6%8C%87-Offer-20-%E8%A1%A8%E7%A4%BA%E6%95%B0%E5%80%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">2.7.1.</span> <span class="toc-text">1. (中等)剑指 Offer 20. 表示数值的字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%B8%AD%E7%AD%89-%E9%9D%A2%E8%AF%95%E9%A2%9867-%E6%8A%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E6%88%90%E6%95%B4%E6%95%B0"><span class="toc-number">2.7.2.</span> <span class="toc-text">2. (中等)面试题67. 把字符串转换成整数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98"><span class="toc-number">2.8.</span> <span class="toc-text">每日一题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2283-%E5%88%A4%E6%96%AD%E4%B8%80%E4%B8%AA%E6%95%B0%E7%9A%84%E6%95%B0%E5%AD%97%E8%AE%A1%E6%95%B0%E6%98%AF%E5%90%A6%E7%AD%89%E4%BA%8E%E6%95%B0%E4%BD%8D%E7%9A%84%E5%80%BC"><span class="toc-number">2.8.1.</span> <span class="toc-text">2283. 判断一个数的数字计数是否等于数位的值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1807-%E6%9B%BF%E6%8D%A2%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%8B%AC%E5%8F%B7%E5%86%85%E5%AE%B9"><span class="toc-number">2.8.2.</span> <span class="toc-text">1807. 替换字符串中的括号内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2287-%E9%87%8D%E6%8E%92%E5%AD%97%E7%AC%A6%E5%BD%A2%E6%88%90%E7%9B%AE%E6%A0%87%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">2.8.3.</span> <span class="toc-text">2287. 重排字符形成目标字符串</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8C%89%E7%85%A7labuladong%E7%9A%84%E6%80%9D%E8%B7%AF%E5%8E%BB%E8%A7%A3%E9%A2%98"><span class="toc-number">3.</span> <span class="toc-text">按照labuladong的思路去解题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%93%BE%E8%A1%A8%E7%AE%97%E6%B3%95"><span class="toc-number">3.1.</span> <span class="toc-text">链表算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#21-%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8"><span class="toc-number">3.1.1.</span> <span class="toc-text">21. 合并两个有序链表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#86-%E5%88%86%E9%9A%94%E9%93%BE%E8%A1%A8"><span class="toc-number">3.1.2.</span> <span class="toc-text">86. 分隔链表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#23-%E5%90%88%E5%B9%B6K%E4%B8%AA%E5%8D%87%E5%BA%8F%E9%93%BE%E8%A1%A8"><span class="toc-number">3.1.3.</span> <span class="toc-text">23. 合并K个升序链表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#19-%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%AC-N-%E4%B8%AA%E7%BB%93%E7%82%B9"><span class="toc-number">3.1.4.</span> <span class="toc-text">19. 删除链表的倒数第 N 个结点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#876-%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%AD%E9%97%B4%E7%BB%93%E7%82%B9"><span class="toc-number">3.1.5.</span> <span class="toc-text">876. 链表的中间结点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#141-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8"><span class="toc-number">3.1.6.</span> <span class="toc-text">141. 环形链表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#142-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8-II"><span class="toc-number">3.1.7.</span> <span class="toc-text">142. 环形链表 II</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#160-%E7%9B%B8%E4%BA%A4%E9%93%BE%E8%A1%A8"><span class="toc-number">3.1.8.</span> <span class="toc-text">160. 相交链表</span></a></li></ol></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By SuperCoko</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">welcome to my blog</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/izumi.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body></html>
