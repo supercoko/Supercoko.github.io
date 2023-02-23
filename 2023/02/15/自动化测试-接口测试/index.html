@@ -1,0 +1,854 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>接口测试及其自动化 | Coko</title><meta name="author" content="SuperCoko"><meta name="copyright" content="SuperCoko"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="必备理论理论地位单元测试-&gt; 接口测试 -&gt; 功能测试 单元测试缺点  需要代码 需要熟悉项目 需要熟悉每个模块作用  功能测试缺点  周期长 后端功能专项测试点难以验证 并发测试 性能测试 安全测试   难以自动化测试  ps: 功能测试是必不可少的 基础概念接口和接口测试概念 系统之间传输数据的通道  由输入和输出两部分组成  接口的特点  一定的规范要求 协议  能灵活自定义的部">
+<meta property="og:type" content="article">
+<meta property="og:title" content="接口测试及其自动化">
+<meta property="og:url" content="https://supercoko.github.io/2023/02/15/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95-%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/index.html">
+<meta property="og:site_name" content="Coko">
+<meta property="og:description" content="必备理论理论地位单元测试-&gt; 接口测试 -&gt; 功能测试 单元测试缺点  需要代码 需要熟悉项目 需要熟悉每个模块作用  功能测试缺点  周期长 后端功能专项测试点难以验证 并发测试 性能测试 安全测试   难以自动化测试  ps: 功能测试是必不可少的 基础概念接口和接口测试概念 系统之间传输数据的通道  由输入和输出两部分组成  接口的特点  一定的规范要求 协议  能灵活自定义的部">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.anime-pictures.net/previews/c11/c1121aab56db2ca4c77dd5a963626650_bp.jpg.avif">
+<meta property="article:published_time" content="2023-02-15T10:27:03.000Z">
+<meta property="article:modified_time" content="2023-02-23T05:11:21.568Z">
+<meta property="article:author" content="SuperCoko">
+<meta property="article:tag" content="接口测试">
+<meta property="article:tag" content="postman">
+<meta property="article:tag" content="Jmeter">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.anime-pictures.net/previews/c11/c1121aab56db2ca4c77dd5a963626650_bp.jpg.avif"><link rel="shortcut icon" href="/img/favicon2.png"><link rel="canonical" href="https://supercoko.github.io/2023/02/15/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95-%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: SuperCoko","link":"链接: ","source":"来源: Coko","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '接口测试及其自动化',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-02-23 13:11:21'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://pic4.zhimg.com/v2-c21606cc260d1e83272a3b3243a2ff17_r.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">24</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">34</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">15</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.anime-pictures.net/previews/c11/c1121aab56db2ca4c77dd5a963626650_bp.jpg.avif')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Coko</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">接口测试及其自动化<a class="post-edit-link" href="null_posts/自动化测试-接口测试.md" title="编辑" target="_blank"><i class="fas fa-pencil-alt"></i></a></h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-02-15T10:27:03.000Z" title="发表于 2023-02-15 18:27:03">2023-02-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-02-23T05:11:21.568Z" title="更新于 2023-02-23 13:11:21">2023-02-23</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/">自动化测试</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="接口测试及其自动化"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="必备理论理论"><a href="#必备理论理论" class="headerlink" title="必备理论理论"></a>必备理论理论</h1><h2 id="地位"><a href="#地位" class="headerlink" title="地位"></a>地位</h2><p>单元测试-&gt; 接口测试 -&gt; 功能测试</p>
+<p>单元测试缺点</p>
+<ul>
+<li>需要代码</li>
+<li>需要熟悉项目</li>
+<li>需要熟悉每个模块作用</li>
+</ul>
+<p>功能测试缺点</p>
+<ul>
+<li>周期长</li>
+<li>后端功能专项测试点难以验证<ul>
+<li>并发测试</li>
+<li>性能测试</li>
+<li>安全测试</li>
+</ul>
+</li>
+<li>难以自动化测试</li>
+</ul>
+<p><code>ps: 功能测试是必不可少的</code></p>
+<h2 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h2><h3 id="接口和接口测试概念"><a href="#接口和接口测试概念" class="headerlink" title="接口和接口测试概念"></a>接口和接口测试概念</h3><ul>
+<li><p>系统之间传输数据的通道</p>
+</li>
+<li><p>由输入和输出两部分组成</p>
+</li>
+<li><p>接口的特点</p>
+<ul>
+<li><p>一定的规范要求 协议</p>
+</li>
+<li><p>能灵活自定义的部分 开发</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><ul>
+<li>按照协议<ul>
+<li>HTTP</li>
+<li>FTP</li>
+<li>TCP&#x2F;UDP&#x2F;IP</li>
+<li>Dubbo</li>
+</ul>
+</li>
+<li>按照语言<ul>
+<li>pyhton</li>
+<li>java</li>
+<li>c&#x2F;c++</li>
+</ul>
+</li>
+<li>按照内外系统<ul>
+<li>内部系统接口和外部系统接口 (第三方接口)</li>
+</ul>
+</li>
+<li>按照技术应用划分<ul>
+<li>HTTP协议</li>
+<li>Web Service</li>
+<li>Restful</li>
+<li>RPC过程调用模型</li>
+<li>Web Socket</li>
+</ul>
+</li>
+<li>移动端API<ul>
+<li>主流也是web api接口</li>
+</ul>
+</li>
+</ul>
+<h3 id="接口的访问形式"><a href="#接口的访问形式" class="headerlink" title="接口的访问形式"></a>接口的访问形式</h3><ul>
+<li>公开接口<ul>
+<li>不需要用户信息, 加密解密, 直接就能访问的 e.g.首页</li>
+</ul>
+</li>
+<li>私有接口<ul>
+<li>需要验证用户会话状态,甚至需要对数据进行加密, 解密和签名才能访问 e.g. 个人用户信息接口, 支付接口</li>
+</ul>
+</li>
+</ul>
+<h4 id="如何设计接口"><a href="#如何设计接口" class="headerlink" title="如何设计接口"></a>如何设计接口</h4><p>进去的数据 -&gt; 某系统 -&gt; 输出数据</p>
+<p>看看代码, 很简单, 之前用flask开发过</p>
+<h2 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h2><h3 id="HTTP协议的概念"><a href="#HTTP协议的概念" class="headerlink" title="HTTP协议的概念"></a>HTTP协议的概念</h3><p>HTTP协议是超文本传输协议, 主要规定了互联网中传输数据时的表中</p>
+<ul>
+<li>支持客户端&#x2F;服务器模式</li>
+<li>简单快速</li>
+<li>灵活</li>
+<li>无连接</li>
+<li>无状态</li>
+</ul>
+<h3 id="HTTP协议的组成部分"><a href="#HTTP协议的组成部分" class="headerlink" title="HTTP协议的组成部分"></a>HTTP协议的组成部分</h3><p>按照HTTP协议规定, </p>
+<p>传输客户端<code>请求报文</code>时, 数据包括三个部分</p>
+<ul>
+<li>请求行</li>
+<li>请求头</li>
+<li>请求体</li>
+</ul>
+<p>传输服务器<code>响应报文</code>时, 数据u包括三个部分</p>
+<ul>
+<li>状态行</li>
+<li>响应头</li>
+<li>响应正文</li>
+</ul>
+<h3 id="HTTP请求"><a href="#HTTP请求" class="headerlink" title="HTTP请求"></a>HTTP请求</h3><p><img src="/images/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95-%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/image-20230218005611659.png" alt="image-20230218005611659"></p>
+<p>请求行: 第一行都是</p>
+<p>请求头: 第一行下面</p>
+<p>请求体: 空行之后都是请求体</p>
+<p>请求行请求头和请求体都可以传输具体数据</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">POST http://localhost/index.php?m=Home&amp;c=User&amp;a=do_login&amp;t=0.005897075... HTTP/1.1 </span><br><span class="line">Host: localhost</span><br><span class="line">Connection: keep-alive</span><br><span class="line">Content-Length: 53</span><br><span class="line">Accept: application/json, text/javascript, */*; q=0.01</span><br><span class="line">X-Requested-With: XMLHttpRequest</span><br><span class="line">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36</span><br><span class="line">Content-Type: application/x-www-form-urlencoded; charset=UTF-8</span><br><span class="line">Origin: http://localhost</span><br><span class="line">Sec-Fetch-Site: same-origin</span><br><span class="line">Sec-Fetch-Mode: cors</span><br><span class="line">Sec-Fetch-Dest: empty</span><br><span class="line">Referer: http://localhost/index.php/Home/user/login.html</span><br><span class="line">Accept-Encoding: gzip, deflate, br</span><br><span class="line">Accept-Language: zh-CN,zh;q=0.9</span><br><span class="line">Cookie: province_id=1; city_id=2; district_id=3; parent_region=%5B%7B%22id%22%3A3%2C%22name%22%3A%22%u4E1C%u57CE%u533A%22%7D%2C%7B%22id%22%3A14%2C%22name%22%3A%22%u897F%u57CE%u533A%22%7D%2C%7B%22id%22%3A22%2C%22name%22%3A%22%u5D07%u6587%u533A%22%7D%2C%7B%22id%22%3A30%2C%22name%22%3A%22%u5BA3%u6B66%u533A%22%7D%2C%7B%22id%22%3A39%2C%22name%22%3A%22%u671D%u9633%u533A%22%7D%2C%7B%22id%22%3A83%2C%22name%22%3A%22%u4E30%u53F0%u533A%22%7D%2C%7B%22id%22%3A105%2C%22name%22%3A%22%u77F3%u666F%u5C71%u533A%22%7D%2C%7B%22id%22%3A115%2C%22name%22%3A%22%u6D77%u6DC0%u533A%22%7D%2C%7B%22id%22%3A145%2C%22name%22%3A%22%u95E8%u5934%u6C9F%u533A%22%7D%2C%7B%22id%22%3A159%2C%22name%22%3A%22%u623F%u5C71%u533A%22%7D%2C%7B%22id%22%3A188%2C%22name%22%3A%22%u901A%u5DDE%u533A%22%7D%2C%7B%22id%22%3A204%2C%22name%22%3A%22%u987A%u4E49%u533A%22%7D%2C%7B%22id%22%3A227%2C%22name%22%3A%22%u660C%u5E73%u533A%22%7D%2C%7B%22id%22%3A245%2C%22name%22%3A%22%u5927%u5174%u533A%22%7D%2C%7B%22id%22%3A264%2C%22name%22%3A%22%u6000%u67D4%u533A%22%7D%2C%7B%22id%22%3A281%2C%22name%22%3A%22%u5E73%u8C37%u533A%22%7D%5D; is_mobile=0; CNZZDATA009=30037667-1536735; is_distribut=0; PHPSESSID=krl4miah115o2nmr6n5nobmh24; cn=0</span><br><span class="line"></span><br><span class="line">username=13800138006&amp;password=123456&amp;verify_code=TViw</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="请求行"><a href="#请求行" class="headerlink" title="请求行"></a>请求行</h4><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">POST http://localhost/index.php?m=Home&amp;c=User&amp;a=do_login&amp;t=0.0058970756... HTTP/1.1</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>请求行的每个数据间, 用空格做分隔符</p>
+</li>
+<li><p>依次分别为 请求方法, URL, 协议&#x2F;版本</p>
+</li>
+<li><p>请求方法</p>
+<ul>
+<li>描述要对URL指向的资源的操作动作</li>
+<li>URL - 指向资源的一个地址</li>
+</ul>
+</li>
+<li><p>常见方法 http1.1</p>
+<ul>
+<li>GET - 获取数据</li>
+<li>POST - 新增数据</li>
+<li>PUT - 修改数据</li>
+<li>DELETE - 删除数据</li>
+<li>OPTIONS&#x2F;HEAD&#x2F;PATCH等</li>
+</ul>
+</li>
+<li><p>URL</p>
+<p>统一资源定位符, 帮助定位互联网网络资源地址</p>
+<ul>
+<li><p>网络资源</p>
+<ul>
+<li>服务器资源, 图片资源, 数据等.</li>
+</ul>
+</li>
+<li><p>浏览器对URL长度做出限制 2182字符</p>
+</li>
+<li><p>分为5个部分</p>
+<ul>
+<li>协议 - http<ul>
+<li>规定传输数据协议, 常见有: ftp, http, https</li>
+</ul>
+</li>
+<li>域名 - localhost<ul>
+<li>决定了要访问的服务器的网址, 这个域名会被DNS服务器解析成IP地址, 通过IP来定位服务器资源地址</li>
+</ul>
+</li>
+<li>端口 - http默认是80 (没有填写端口时, 就采用默认端口)<ul>
+<li>服务器内部的应用的端口</li>
+<li>https 443, ftp 21</li>
+</ul>
+</li>
+<li>资源路径 - &#x2F;index.php<ul>
+<li>定位服务器具体代码的路径</li>
+</ul>
+</li>
+<li>查询参数 m&#x3D;Home&amp;c&#x3D;User&amp;a&#x3D;do_login&amp;t&#x3D;0.005897075<ul>
+<li>具体传递的数据</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="请求头"><a href="#请求头" class="headerlink" title="请求头"></a>请求头</h4><p>请求头主要用于存放一些补偿更新的数据 e.g. 客户端请求的浏览器说明,客户端域名, Cokkie等</p>
+<p>请求头主要由键值对组成, 每行一对:</p>
+<ul>
+<li>结构为 键名: 属性值</li>
+</ul>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">ost: localhost</span><br><span class="line">Connection: keep-alive</span><br><span class="line">Content-Length: 53</span><br><span class="line">Accept: application/json, text/javascript, */*; q=0.01</span><br><span class="line">X-Requested-With: XMLHttpRequest</span><br><span class="line">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36</span><br><span class="line">Content-Type: application/x-www-form-urlencoded; charset=UTF-8</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>开发可以自定义请求头的键和属性值, 也可以对HTTP协议规定的固定值进行二次开发</p>
+<p>常用请求头</p>
+<ul>
+<li>User-Agent 描述客户端的浏览器信息</li>
+<li>Content-Type 描述请求体的内容格式<ul>
+<li>text&#x2F;plain</li>
+<li>text&#x2F;xml</li>
+<li>x-www-form-urlencoded 表单格式, 不能传文件图片音视频</li>
+<li>multipart&#x2F;form-data 二进制表单格式, 能传文件图片音视频</li>
+<li>application&#x2F;json</li>
+</ul>
+</li>
+</ul>
+<h4 id="请求体"><a href="#请求体" class="headerlink" title="请求体"></a>请求体</h4><p>请求体用来传输数据.  请求体不像URL, 不能直接看到, 数据类型和数据大小更多</p>
+<p>设计一个接口 要求输入</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">课程标题title 字符串 不超过50个字符</span><br><span class="line">课程备注remark 字符串 不超过500个字符</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>我们需要对输入数据进行用例设计, 测试服务器的相应数据与需求规定的预期是否一致</p>
+<p>同样数据, 不同content-type属性值使, 有不同编写方式</p>
+<ul>
+<li>Content-Type: application&#x2F;json</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;title&quot;</span><span class="punctuation">:</span><span class="string">&quot;测试课程&quot;</span><span class="punctuation">,</span> <span class="attr">&quot;remark&quot;</span><span class="punctuation">:</span><span class="string">&quot;干货满满，学完就能就业&quot;</span><span class="punctuation">,</span> <span class="attr">&quot;price&quot;</span><span class="punctuation">:</span><span class="string">&quot;5.20&quot;</span><span class="punctuation">,</span> <span class="attr">&quot;tag&quot;</span><span class="punctuation">:</span><span class="string">&quot;测试&quot;</span><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Content-Type: text&#x2F;xml</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;utf-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">soap:Envelope</span> <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span> <span class="attr">xmlns:xsd</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema&quot;</span> <span class="attr">xmlns:soap</span>=<span class="string">&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">soap:Body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">addCourse</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://WebXml.com.cn/&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">title</span>&gt;</span>测试课程<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">remark</span>&gt;</span>干货满满，学完就能就业<span class="tag">&lt;/<span class="name">remark</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">price</span>&gt;</span>5.20<span class="tag">&lt;/<span class="name">price</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">tag</span>&gt;</span>测试<span class="tag">&lt;/<span class="name">tag</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">addCourse</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">soap:Body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">soap:Envelope</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Content-Type: x-www-form-urlencoded</li>
+</ul>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">title=测试课程&amp;remark=干货满满，进阶提升找工作&amp;price=5.20&amp;tag=测试</span><br></pre></td></tr></table></figure>
+
+<h3 id="HTTP响应"><a href="#HTTP响应" class="headerlink" title="HTTP响应"></a>HTTP响应</h3><p><img src="/images/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95-%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/image-20230218123149833.png" alt="image-20230218123149833"></p>
+<p>状态行 - 响应报文中的第一行</p>
+<p>响应头 - 状态行下面, 空行之前都是响应头</p>
+<p>响应正文 - 空行之后都是</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">HTTP/1.1 200 OK</span><br><span class="line">Server: nginx/1.11.5</span><br><span class="line">Date: Fri, 09 Apr 2021 08:28:01 GMT</span><br><span class="line">Content-Type: text/html; charset=UTF-8</span><br><span class="line">Connection: keep-alive</span><br><span class="line">Vary: Accept-Encoding</span><br><span class="line">X-Powered-By: PHP/5.6.27</span><br><span class="line">Set-Cookie: is_mobile=0; expires=Fri, 09-Apr-2021 09:28:00 GMT; Max-Age=3600; path=/</span><br><span class="line">Expires: Thu, 19 Nov 1981 08:52:00 GMT</span><br><span class="line">Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0</span><br><span class="line">Pragma: no-cache</span><br><span class="line">Set-Cookie: user_id=8; path=/</span><br><span class="line">Set-Cookie: is_distribut=0; path=/</span><br><span class="line">Set-Cookie: uname=summer; path=/</span><br><span class="line">Set-Cookie: cn=0; expires=Fri, 09-Apr-2021 07:28:01 GMT; Max-Age=-3600; path=/</span><br><span class="line">Content-Length: 999</span><br><span class="line"></span><br><span class="line">&#123;&quot;status&quot;:1,&quot;msg&quot;:&quot;\u767b\u9646\u6210\u529f&quot;,&quot;result&quot;:&#123;&quot;user_id&quot;:8,&quot;email&quot;:&quot;&quot;,&quot;password&quot;:&quot;519475228fe35ad067744465c42a19b2&quot;,&quot;paypwd&quot;:&quot;519475228fe35ad067744465c42a19b2&quot;,&quot;sex&quot;:0,&quot;birthday&quot;:0,&quot;user_money&quot;:&quot;99861.00&quot;,&quot;frozen_money&quot;:&quot;0.00&quot;,&quot;distribut_money&quot;:&quot;0.00&quot;,&quot;underling_number&quot;:0,&quot;pay_points&quot;:100000,&quot;address_id&quot;:0,&quot;reg_time&quot;:1523857661,&quot;last_login&quot;:1617956749,&quot;last_ip&quot;:&quot;&quot;,&quot;qq&quot;:&quot;&quot;,&quot;mobile&quot;:&quot;13800138006&quot;,&quot;mobile_validated&quot;:1,&quot;oauth&quot;:&quot;&quot;,&quot;openid&quot;:null,&quot;unionid&quot;:null,&quot;head_pic&quot;:&quot;http:\/\/thirdwx.qlogo.cn\/mmopen\/vi_32\/c58Iiaib1aPodvKHMMGR9ZYmq7XGFUgppvhxgQKrJxdlZTAauZ8dTucEguiamsncVDR3h32TMO4YzppDmSuHIGI9w\/132&quot;,&quot;province&quot;:0,&quot;city&quot;:0,&quot;district&quot;:0,&quot;email_validated&quot;:0,&quot;nickname&quot;:&quot;summer&quot;,&quot;level&quot;:2,&quot;discount&quot;:&quot;1.00&quot;,&quot;total_amount&quot;:&quot;605.00&quot;,&quot;is_lock&quot;:0,&quot;is_distribut&quot;:0,&quot;first_leader&quot;:3,&quot;second_leader&quot;:0,&quot;third_leader&quot;:0,&quot;token&quot;:&quot;&quot;,&quot;message_mask&quot;:63,&quot;push_id&quot;:&quot;190e35f7e07c8658ec6&quot;,&quot;distribut_level&quot;:0,&quot;is_vip&quot;:0,&quot;xcx_qrcode&quot;:null,&quot;poster&quot;:null,&quot;level_name&quot;:&quot;\u5014\u5f3a\u9752\u94dc&quot;&#125;,&quot;url&quot;:&quot;&quot;&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="状态行"><a href="#状态行" class="headerlink" title="状态行"></a>状态行</h4><p>描述服务器处理客户端请求的结果</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">HTTP/1.1 200 OK</span><br></pre></td></tr></table></figure>
+
+<p>状态行也由3个部分组成：协议&#x2F;版本 状态码 状态消息</p>
+<ul>
+<li><p><strong>协议&#x2F;版本：</strong> 该响应报文的所使用的协议和版本号</p>
+</li>
+<li><p><strong>状态码：</strong> 描述服务器处理请求的结果；状态码由3位数字组成，可以分成5类</p>
+<ul>
+<li><p>1XX：代表客户端请求已经被接收了，继续处理</p>
+</li>
+<li><p>2XX：代表客户端请求被服务器按照内部逻辑正确处理成功了</p>
+</li>
+<li><p>3XX：资源已经失效，重定向到新的地址</p>
+</li>
+<li><p>4XX：客户端错误</p>
+</li>
+<li><p>5XX：服务器错误</p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>注意：200代表服务器处理成功，但是并不代表业务成功。</p>
+<p>例如：登陆成功和密码错误服务器都会返回200的状态码，可是在用户看来一个是登陆成功，一个是登陆失败。</p>
+</blockquote>
+<ul>
+<li><strong>状态消息：</strong> 对状态码的解释说明</li>
+</ul>
+<p><strong>常见状态码</strong></p>
+<p><img src="/images/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95-%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/image-20230218124713636.png" alt="image-20230218124713636"></p>
+<h4 id="响应头"><a href="#响应头" class="headerlink" title="响应头"></a>响应头</h4><p>响应头和请求头结构和内容都一样，不同的是响应头是对响应数据的描述。</p>
+<p>例如，响应头中的Content-Type，描述的是响应正文的内容格式类型</p>
+<h4 id="响应正文-接口测试重点测试内容"><a href="#响应正文-接口测试重点测试内容" class="headerlink" title="响应正文 (接口测试重点测试内容)"></a>响应正文 (接口测试重点测试内容)</h4><p>经过服务器处理后的响应数据。</p>
+<p>响应数据类型包括：html、xml、text、json、图片等等</p>
+<h3 id="HTTPS"><a href="#HTTPS" class="headerlink" title="HTTPS"></a>HTTPS</h3><p>HTTP + SSL&#x2F;TLS(Secure Socket Layer&#x2F; Transport Layer Security)认证 , 是一个基于<code>安全套接字</code>的<code>超文本传输协议</code></p>
+<h4 id="HTTPS的作用"><a href="#HTTPS的作用" class="headerlink" title="HTTPS的作用"></a>HTTPS的作用</h4><p>主要用于对网络传输的数据进行加密, 保证数据的安全性, 完整性, 一致性.</p>
+<p>测试参与的接口测试工作中一般都用HTTP, 生产协议用HTTPS</p>
+<h4 id="HTTP与HTTPS区别"><a href="#HTTP与HTTPS区别" class="headerlink" title="HTTP与HTTPS区别"></a>HTTP与HTTPS区别</h4><ul>
+<li>HTTP 的 URL 以 http:&#x2F;&#x2F; 开头，而 HTTPS 的 URL 以 https:&#x2F;&#x2F; 开头</li>
+<li>HTTP 是不安全的，而 HTTPS 是安全的</li>
+<li>HTTP 标准端口是 80 ，而 HTTPS 的标准端口是 443</li>
+<li>HTTP 无需加密，而 HTTPS 对传输的数据进行加密</li>
+<li>HTTP 无需证书，而 HTTPS 需要认证证书</li>
+<li>HTTP 免费，HTTPS收费</li>
+</ul>
+<h4 id="深入理解HTTPS"><a href="#深入理解HTTPS" class="headerlink" title="深入理解HTTPS"></a>深入理解HTTPS</h4><p>HTTP协议是超文本传输协议，而HTTPS多了一个SSL&#x2F;TLS认证。重点在于理解SSL&#x2F;TLS认证</p>
+<p>SSL&#x2F;TLS认证，是通过一个Ca证书完成的，这个证书可以在本地生成，也可以申请。</p>
+<p>但是在本地生成的证书，需要客户端信任才能访问。</p>
+<p><strong>申请证书：</strong> 向权威机构申请证书</p>
+<p><strong>密码基础概念：</strong></p>
+<p>明文：直接能看懂的文本内容</p>
+<p>密文：经过加密后的内容</p>
+<p>加密：对数据进行处理，使数据被外部人员无法理解，但是自己人能够理解。</p>
+<p>加密算法：对数据加密时，所采用的相关计算方法。</p>
+<p>密钥：加密数据和解密数据时，使用的一个字符串，这个字符串起到钥匙的作用。</p>
+<p>签名：使用一种超运算加密算法，如MD5,SHA256算法对数据进行运算，形成摘要，然后截取一部分摘要得到的字符串就是签名。签名的作用是确保数据没有被篡改。</p>
+<blockquote>
+<p>凯撒加密算法</p>
+<ul>
+<li>a-z 通过字母表约定, 加密右移, 解密左移</li>
+</ul>
+<p>签名的加密算法会丢失信息, 不可还原, </p>
+</blockquote>
+<p><strong>对称加密：</strong></p>
+<p>加密和解密过程完全对称的加密。</p>
+<p>典型的对称加密算法是：DES，3DES加密算法, 凯撒加密。</p>
+<p>特点：</p>
+<ul>
+<li>加密解密完全对称，<code>加密时使用的密钥和解密时使用的密钥是同一个密钥</code></li>
+<li>性能好，速度快</li>
+</ul>
+<p><strong>非对称加密：</strong></p>
+<p>加密和解密过程不对称的加密。</p>
+<p>非对称加密算法有：RSA加密算法</p>
+<p>非对称加密算法中，把密钥分成了公钥和私钥。其中公钥是指公开的密钥，私钥是指不公开的密钥。</p>
+<p>使用非对称加密算法加密数据的过程中：</p>
+<ul>
+<li>公钥加密的数据，只能用私钥解密。</li>
+<li>私钥加密的数据，只能用公钥解密。</li>
+</ul>
+<p>特点：</p>
+<ul>
+<li>因为加解密不完全对称，所以恶意攻击者不能获取全部信息，更能保证数据的安全性</li>
+<li>性能比对称加密差</li>
+</ul>
+<p>作用：一般用公钥加密客户端生成要用的对称加密算法中的密钥，保证对称加密的密钥不被公开。</p>
+<p>非对称加密虽然在一定程度上保证了数据的安全，但是由于黑客可以模拟服务器，进行攻击，所以它也并不安全。</p>
+<p><img src="/images/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95-%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/image-20230218140342706.png" alt="image-20230218140342706"></p>
+<p><strong>SSL&#x2F;TLS认证：</strong></p>
+<p>SSL认证是一个非常复杂的过程，主要可以认为分成以下几个步骤完成：</p>
+<ul>
+<li>客户端发送请求，要与服务器建立HTTPS连接</li>
+<li>服务器返回SSL证书和加密算法给客户端</li>
+<li>浏览器根据内置的SSL证书验证权威结构来验证SSL证书是否合法、有效</li>
+<li>浏览器内部使用对称加密算法生成一个密钥，用于加密传输数据</li>
+<li>浏览器使用SSL证书中的公钥即为Pa，加密对称加密算法生成的密钥记为Ra，得到一个Pa(Ra)加密过后的字符串，然后把它发送给服务器</li>
+<li>服务器使用私钥解密Pa(Ra)加密过后的字符串，得到Ra</li>
+<li>后期，客户端和服务器都使用Ra加密数据，保证数据的安全性。</li>
+</ul>
+<p>SSL证书是服务器提前申请的</p>
+<ul>
+<li>服务器先使用非对称加密算法，生成公钥Pa和私钥Pb</li>
+<li>服务器使用公钥Pa像权威结构申请SSL证书，权威结构验证后，返回SSL证书<ul>
+<li>SSL证书内容包括：服务器相关信息、服务器公钥、以及这些信息的签名</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95-%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/image-20230218143334323.png" alt="image-20230218143334323"></p>
+<p>拓展</p>
+<p>TCP&#x2F;UDP 粗略复习下,详细见网络不封内容</p>
+<ul>
+<li><p>三次握手</p>
+<ul>
+<li>-&gt; SYN seq &#x3D; x</li>
+<li>&lt;- SYN ACK ack &#x3D; x+1 seq&#x3D; y</li>
+<li>-&gt; ACK seq &#x3D; x+1 ack &#x3D; y+1</li>
+</ul>
+</li>
+<li><p>三次握手细节</p>
+<ul>
+<li>SYN &#x3D; 1 ACK &#x3D; 0 连接请求报文</li>
+<li>SYN &#x3D; 1 ACK &#x3D; 1 是响应报文</li>
+</ul>
+</li>
+<li><p>四次挥手</p>
+<ul>
+<li>-&gt; Fin ACK seq &#x3D; u ack &#x3D; v</li>
+<li>&lt;- ACK seq &#x3D; v ack &#x3D; u+1</li>
+<li>&lt;- FIN ACK seq &#x3D; w ack &#x3D; u+1</li>
+<li>-&gt; ACK seq &#x3D; u+1 ack &#x3D; w+1</li>
+</ul>
+</li>
+</ul>
+<h2 id="会话管理"><a href="#会话管理" class="headerlink" title="会话管理"></a>会话管理</h2><h3 id="会话基本概念"><a href="#会话基本概念" class="headerlink" title="会话基本概念"></a>会话基本概念</h3><p>HTTP是无状态, 所以客户端和服务器都不会保存客户端请求信息</p>
+<p>为了让服务器知道客户端的请求状态是不是一登录状态, 通过一个字符串表示用户是否登录,然后控制用户对资源的访问</p>
+<p>Web项目中, 主要有三种实现方式</p>
+<ul>
+<li>cookie</li>
+<li>session</li>
+<li>token</li>
+</ul>
+<p>典型会话管理接口也叫登录接口或授权接口</p>
+<h3 id="基于cookie实现会话管理"><a href="#基于cookie实现会话管理" class="headerlink" title="基于cookie实现会话管理"></a>基于cookie实现会话管理</h3><p>Cookie是一个容器，默认大小4KB，主要用于存放数据大小比较小的临时数据。</p>
+<p><img src="/images/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95-%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/image-20230218163220939.png" alt="image-20230218163220939"></p>
+<p>Cookie的特点：</p>
+<ul>
+<li><p>不能跨域：我们访问服务器时，都会通过域名来访问。例如：<a target="_blank" rel="noopener" href="http://www.lagou.com,这个www.lagou.com是域名.如果是我们www.lagou.com域名指向的服务器发送的cookie,那么这个cookie就不能在www.baidu.com中使用./">www.lagou.com，这个www.lagou.com是域名。如果是我们www.lagou.com域名指向的服务器发送的cookie，那么这个cookie就不能在www.baidu.com中使用。</a></p>
+</li>
+<li><p>存在有效期</p>
+<p>Cookie存在有效时间，超过规定的时间后就会失效。可以设置Cookie的配置，来让cookie永久不失效。</p>
+<p>不设置有效期时，cookie默认是一个session cookie，浏览器不关闭，cookie不失效</p>
+</li>
+<li><p>大小：默认4KB大小</p>
+</li>
+<li><p>有数量限制：不同浏览器限制的cookie数量不一样，为了保证兼容性，做最低兼容，cookie数量不要超过二十个。</p>
+</li>
+<li><p>对字符编码有限制</p>
+</li>
+</ul>
+<h3 id="基于Session实现会话管理"><a href="#基于Session实现会话管理" class="headerlink" title="基于Session实现会话管理"></a>基于Session实现会话管理</h3><p>session是把用户数据，放在服务端。</p>
+<p>但是客户端依然需要通过sessionid来访问存放在服务端的session，这样才能实现会话管理。</p>
+<p><img src="/images/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95-%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/image-20230218163235794.png" alt="image-20230218163235794"></p>
+<p>cookie和session的区别</p>
+<ul>
+<li>大小不同，cookie默认4kb，session无上限。</li>
+<li>有效期不同，cookie可以设置为永久不失效，而session中，浏览器一旦关闭sessoin就会自动close失效</li>
+<li>位置不同，cookie在客户端，session在服务器</li>
+<li>性能不同，cookie在客户端，不会占用太多服务器资源，而session占用服务器资源，对服务器压力较大</li>
+<li>安全性不同：cookie在客户端不安全。session在服务端更安全</li>
+</ul>
+<h3 id="基于Token实现会话管理"><a href="#基于Token实现会话管理" class="headerlink" title="基于Token实现会话管理"></a>基于Token实现会话管理</h3><p>Token是服务端生成的一串字符串，用来当作客户端请求的令牌，当第一次登录后，服务器根据用户数据的信息，生成token，以后客户端只需带上这个Token前来请求数据即可，无需再次带上用户名和密码。</p>
+<p><code>作用：Token的目的是为了减轻服务器的压力，减少频繁的查询数据库，使服务器更加健壮。</code></p>
+<p>token示例(JWT Token)：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ3YW5nIiwiY3JlYXRlZCI6MTQ4OTA3OTk4MTM5MywiZXhwIjoxNDg5Njg0NzgxfQ.RC-BYCe_UZ2URtWddUpWXIp4NMsoeq2O6UF-8tVplqXY1-CI9u1-a-9DAAJGfNWkHE81mpnR3gXzfrBAB3WUAg</span><br></pre></td></tr></table></figure>
+
+
+
+<p>token组成,每部分用 . 隔开</p>
+<ul>
+<li>头 header<ul>
+<li>服务器从头信息获取相关的加密算法来请求体进行解密</li>
+</ul>
+</li>
+<li>请求体 payload<ul>
+<li>服务器用头信息中的算法解密payload部分后, 得到用户信息</li>
+</ul>
+</li>
+<li>签名 signature<ul>
+<li>服务器通过使用头信息记录的签名算法, 来对头和请求体尽心签名, 用来验证token是否被更改</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95-%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/image-20230219185221848.png" alt="image-20230219185221848"></p>
+<h3 id="会话有效时间控制"><a href="#会话有效时间控制" class="headerlink" title="会话有效时间控制"></a>会话有效时间控制</h3><ul>
+<li>cookie实现的会话, 通过cookie有效时间配置<ul>
+<li>客户端无法控制cookie的有效时间, 需要通过服务端代码进行控制</li>
+</ul>
+</li>
+<li>session实现的会话, 可以通过cookie和seesion 双向的有效时间进行控制</li>
+<li>token的有效时间，可以通过token、cookie和session三个技术的有效时间进行控制</li>
+<li>或者给接口指定时间戳, 通过内部代码校验时间戳<ul>
+<li>12306未支付订单的有效时间</li>
+</ul>
+</li>
+</ul>
+<h3 id="接口测试难点-登录接口测试处理方法"><a href="#接口测试难点-登录接口测试处理方法" class="headerlink" title="接口测试难点 - 登录接口测试处理方法"></a>接口测试难点 - 登录接口测试处理方法</h3><p><code>一般功能测试阶段测试登录, 不在接口测试中测试</code></p>
+<p>登陆接口是一个带有安全功能的接口，其中包括了用户名、密码、验证码这三块。</p>
+<p>其中，密码必须使用内部算法加密；验证码必须让黑客难以识别。这也就带来了无法通过接口对登陆接口进行全面测试的问题。</p>
+<p>所以接口测试中，不会全面测试登陆接口，改为通过手工进行登陆功能的测试。</p>
+<p>绕过登陆的方法：拿到令牌</p>
+<ul>
+<li><p>通过前端页面登陆，拿到令牌</p>
+</li>
+<li><p>Mock登陆接口：</p>
+<p>Mock验证码为万能验证码，Mock登陆接口密码为固定密码从而让测试能够进行登陆，拿到令牌</p>
+</li>
+<li><p>白名单控制</p>
+<p>在代码中增加白名单功能，白名单账号无需复杂的校验就可以通过接口登陆，拿到令牌</p>
+</li>
+</ul>
+<p>以上解决方法，除了第一种可以测试人员独立解决以外，其他两种，都需要开发协助才能解决。</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">没有加密的用户数据：&#123;&quot;username&quot;:&quot;taitan&quot;, &quot;password&quot;:&quot;123456&quot;, &quot;verify_code&quot;:&quot;123456&quot;&#125;</span><br><span class="line">已加密的用户数据：&#123;&quot;username&quot;:&quot;taitan&quot;, &quot;password&quot;:&quot;1c2VybmFtZSI6InRhaXRhb&quot;, &quot;verify_code&quot;:&quot;123456&quot;&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="接口签名"><a href="#接口签名" class="headerlink" title="接口签名"></a>接口签名</h3><p>接口签名非常好理解，就是把接口的请求数据，进行签名后，再放入该接口的sign中。</p>
+<p>主要的目的，就是为了防止接口信息被非法篡改，保证每次接口请求数据的一致性和完整性。</p>
+<p>但是它并不能阻止黑客查看接口的数据。</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">如：</span><br><span class="line">接口请求数据为：&#123;&quot;username&quot;:&quot;13800000001&quot;, &quot;password&quot;:&quot;123456&quot;, &quot;create_time&quot;:&quot;1519516631&quot;&#125;</span><br><span class="line">那么md5(&#123;&quot;username&quot;:&quot;13800000001&quot;, &quot;password&quot;:&quot;123456&quot;, &quot;create_time&quot;:&quot;1519516631&quot;&#125;) =&gt; 得到a465b652eb7707ffaf7c0da21f7f8a6a</span><br><span class="line">然后重新构造请求：</span><br><span class="line">&#123;&quot;username&quot;:&quot;13800000001&quot;, &quot;password&quot;:&quot;123456&quot;, &quot;create_time&quot;:&quot;1519516631&quot;, &quot;sign&quot;:&quot;得到a465b652eb7707ffaf7c0da21f7f8a6a&quot;&#125;</span><br><span class="line"></span><br><span class="line">服务器拿到这组数据后</span><br><span class="line">取出&#123;&quot;username&quot;:&quot;13800000001&quot;, &quot;password&quot;:&quot;123456&quot;, &quot;create_time&quot;:&quot;1519516631&quot;&#125;</span><br><span class="line">然后也进行md5(&#123;&quot;username&quot;:&quot;13800000001&quot;, &quot;password&quot;:&quot;123456&quot;, &quot;create_time&quot;:&quot;1519516631&quot;&#125;)  得出=&gt; X</span><br><span class="line">查看X是否与 sing中的值一模一样。</span><br><span class="line">如果一样证明接口信息没有被篡改</span><br></pre></td></tr></table></figure>
+
+<p>应用：保证数据的一致性、完整性</p>
+<p>签名后的接口测试方法：</p>
+<ul>
+<li>开发提供签名算法，我们使用工具也构造出同样要求的请求</li>
+<li>开发提供签名的工具或插件，我们使用它们，结合接口测试工具，构造出同样要求的请求</li>
+<li>开发关闭签名，不校验sign（这种属于不全面的测试，没有校验的sign，需要开启sign之后，放在手工环节进行）</li>
+</ul>
+<h2 id="接口文档"><a href="#接口文档" class="headerlink" title="接口文档"></a>接口文档</h2><p>接口文档又称为api文档 Application Program Interface</p>
+<p>描述接口的相关信息, 包括接口的请求数据, 也就是入参, 和响应数据, 也就是出参</p>
+<p>作用</p>
+<ul>
+<li>让前端工程师和后端工程师够同协作提高效率</li>
+<li>让项目版本更迭&#x2F;人力更迭时, 可以通过文档交接工作, 提高效率</li>
+<li>让测试人员进行测试时, 有一个可以参考的文档, 从而更好进行测试</li>
+</ul>
+<h3 id="接口文档组成部分"><a href="#接口文档组成部分" class="headerlink" title="接口文档组成部分"></a>接口文档组成部分</h3><p>基本信息</p>
+<ul>
+<li>请求方法</li>
+<li>资源路径</li>
+<li>描述</li>
+<li>接口名字(不是一定在这)</li>
+</ul>
+<p>请求内容 - 字段名, 字段值, 是否必须, 示例, 备注</p>
+<ul>
+<li>请求头</li>
+<li>查询参数</li>
+<li>请求体</li>
+</ul>
+<p>响应内容</p>
+<ul>
+<li>响应数据</li>
+<li>响应数据中自定义状态码含义的描述</li>
+<li>不用情况下HTTP响应状态码的含义</li>
+</ul>
+<h3 id="接口文档分类"><a href="#接口文档分类" class="headerlink" title="接口文档分类"></a>接口文档分类</h3><ul>
+<li>web形式<ul>
+<li>swagger工具</li>
+</ul>
+</li>
+<li>PDF, Word, Excel</li>
+<li>代码形式</li>
+</ul>
+<h3 id="接口规范"><a href="#接口规范" class="headerlink" title="接口规范"></a>接口规范</h3><p>见文档</p>
+<p>…</p>
+<h4 id="传统风格接口"><a href="#传统风格接口" class="headerlink" title="传统风格接口"></a>传统风格接口</h4><p>查询 get&#x2F;post 200</p>
+<p>创建修改删除 post 200</p>
+<p>特点</p>
+<ul>
+<li>URL没有固定的写法, 一个公司中, 操作同一组数据可能会出现多个URL的情况</li>
+<li>响应状态码同一为200</li>
+<li>请求都是GET,POST</li>
+</ul>
+<h4 id="restful风格接口"><a href="#restful风格接口" class="headerlink" title="restful风格接口"></a>restful风格接口</h4><p>如果一个架构设计满足REST设计原则, 则称为RESTful</p>
+<p>基本标准</p>
+<ul>
+<li>每个URL都是一个资源</li>
+<li>客户端只能操作资源的表现层<ul>
+<li>表现层 - 数据的表现形式(json, html, xml) , 不能直接操作数据库</li>
+</ul>
+</li>
+<li>客户端通过HTTP动词, 操作资源,实现表现成状态转化<ul>
+<li>GET 查询</li>
+<li>POST 新增</li>
+<li>PUT 修改</li>
+<li>DELETE 删除</li>
+<li>操作完成后, 资源对应数据会发生改变, 所以叫做状态转化</li>
+</ul>
+</li>
+<li>无状态<ul>
+<li>不保存请求数据</li>
+</ul>
+</li>
+<li>自描述性</li>
+</ul>
+<p>特点</p>
+<ul>
+<li>在项目中对同一个资源的操作, URL是一样的</li>
+<li>响应状态码<ul>
+<li>GET 200</li>
+<li>POST 201</li>
+<li>PUT 201</li>
+<li>DELETE 204</li>
+</ul>
+</li>
+</ul>
+<p>Restful 汇总自描述星的体现</p>
+<ul>
+<li>通过options方法, 能获取到操作的URL资源的所有请求方法和子资源, 以及每个资源的调用方法</li>
+</ul>
+<h2 id="接口测试的工作流程"><a href="#接口测试的工作流程" class="headerlink" title="接口测试的工作流程"></a>接口测试的工作流程</h2><h3 id="理想情况"><a href="#理想情况" class="headerlink" title="理想情况"></a>理想情况</h3><ul>
+<li>需求分析</li>
+<li>开发提供接口文档<ul>
+<li>文档形式</li>
+<li>web形式</li>
+<li>代码形式</li>
+</ul>
+</li>
+<li>分析接口文档</li>
+<li>编写接口测试用例</li>
+<li>执行接口测试用例<ul>
+<li>postman</li>
+<li>jemeter</li>
+<li>python&#x2F;java</li>
+<li>swagger</li>
+<li>fiddler Charles</li>
+</ul>
+</li>
+<li>输出报告</li>
+<li>进行自动化接口测试, 和持续集成</li>
+</ul>
+<h3 id="实际工作的接口测试"><a href="#实际工作的接口测试" class="headerlink" title="实际工作的接口测试"></a>实际工作的接口测试</h3><p>问题</p>
+<ul>
+<li><p>开发不提供接口文档</p>
+<ul>
+<li>没有界面能够使用</li>
+<li>有界面</li>
+</ul>
+</li>
+<li><p>开发题工具接口文档不全</p>
+</li>
+<li><p>开发提供web形式接口文档</p>
+</li>
+<li><p>开发直接贴代码</p>
+</li>
+<li><p>看不懂</p>
+</li>
+</ul>
+<p>….都是些水话</p>
+<h2 id="接口用例设计"><a href="#接口用例设计" class="headerlink" title="接口用例设计"></a>接口用例设计</h2><p>设计用例提高效率, 防止遗漏, 并且能通过用例实施监控</p>
+<h3 id="接口用例设计思路"><a href="#接口用例设计思路" class="headerlink" title="接口用例设计思路"></a>接口用例设计思路</h3><h4 id="设计用例时的四大维度"><a href="#设计用例时的四大维度" class="headerlink" title="设计用例时的四大维度"></a>设计用例时的四大维度</h4><ul>
+<li><p>功能</p>
+<ul>
+<li>单个接口测试</li>
+<li>接口业务场景测试(多接口组合测试)</li>
+</ul>
+</li>
+<li><p>性能</p>
+<ul>
+<li>相应时间</li>
+<li>吞吐量</li>
+<li>服务器资源使用率(cpu, 内存, 磁盘, 网络, IO)</li>
+<li>错误率</li>
+<li>并发数<ul>
+<li>ps 幂等测试</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>安全</p>
+<ul>
+<li>敏感信息是否泄露</li>
+<li>XSS注入 (js代码)</li>
+<li>SQL注入</li>
+<li>其他</li>
+</ul>
+</li>
+<li><p>兼容性</p>
+<p>接口的兼容性,主要测试不同接口版本的兼容</p>
+</li>
+</ul>
+<h3 id="接口功能测试用例的设计方法"><a href="#接口功能测试用例的设计方法" class="headerlink" title="接口功能测试用例的设计方法"></a>接口功能测试用例的设计方法</h3><p>简单说, 可以使用黑盒测试用例设计方法来设计</p>
+<p>然后根据需求规定的业务场景, 使用场法来设计业务场景测试用例</p>
+<p>第一步, 分析接口文档, 接口的入参和出参, 明确每个参数类型和作用</p>
+<ul>
+<li><p>参数类型</p>
+<ul>
+<li><p>字符串 测试数字, 字幕, 特殊字符, 字符串长度, 为空, 为Null, 重复字符串</p>
+</li>
+<li><p>整型数字 测试数字大小, 位数, 小数, 负数, 0, 为空, 为Null, 重复数字, 精度, 科学计算法</p>
+</li>
+<li><p>小数 测试小数大小, 位数, 整数, 负数, 0, 为空, 为Null, 重复数字, 精度</p>
+</li>
+<li><p>日期 测试闰年闰月, 大小月, 时分秒</p>
+</li>
+<li><p>列表对象 重点关注有没有列表的功能, 对于请求数据,通过构造单个列表数据, 多个列表数据进行测试</p>
+<ul>
+<li>优先覆盖列表数据都正确的场景, 刺激覆盖列表数据机油正确数据, 又有错误数据的场景</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">post http://xxx.xxx/api/v1/user</span><br><span class="line">content-type:application/json</span><br><span class="line"></span><br><span class="line">&#123;&quot;tag&quot;:&quot;add&quot;, &quot;user_info_list&quot;:[&#123;&quot;mobile&quot;:&quot;xx&quot;, &quot;password&quot;:&quot;x&quot;&#125;, &#123;&quot;mobile&quot;:&quot;&quot;, &quot;password&quot;:&quot;x&quot;&#125;]&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>参数作用 <ul>
+<li>结合接口文档, 需求文档分析</li>
+<li>每个参数的作用不是固定的, 必须结合接口的作用,结合上下文场景分析</li>
+<li>e.g. 登录接口</li>
+</ul>
+</li>
+</ul>
+<p>第二步 分析接口的使用场景</p>
+<p>接口测试中, 单个接口参数, 已经覆盖测试场景, 所以我们你需要分析出每个参数的可能使用场景来进行用例设计</p>
+<p>在进行接口的业务功能测试后, 还需要考虑接口的参数测试(优先级低)</p>
+<ul>
+<li>必填参数</li>
+<li>组合参数</li>
+<li>全部参数</li>
+<li>多参</li>
+<li>少参</li>
+<li>无参</li>
+<li>错误参数</li>
+</ul>
+<p>总结</p>
+<ul>
+<li><p>第一步：熟悉接口的参数（入参和出参）</p>
+</li>
+<li><p>第二步：针对参数使用等价类、边界值设计测试用例</p>
+<ul>
+<li><p>所有的入参，针对每个参数使用等价类、边界值等黑盒测试用例设计方法进行测试</p>
+</li>
+<li><p>所有的出参，针对重要参数，使用等价类、边界值等黑盒测试用例设计方法进行测试</p>
+</li>
+</ul>
+</li>
+<li><p>第三步：分析参数的使用场景，设计该接口每个参数的使用场景</p>
+</li>
+<li><p>第四步：接口参数测试</p>
+</li>
+</ul>
+<h3 id="单接口用例设计"><a href="#单接口用例设计" class="headerlink" title="单接口用例设计"></a>单接口用例设计</h3><p>第一步 拿接口相关信息, 请求数据和响应数据</p>
+<ul>
+<li>通过接口文档</li>
+<li>通过抓包</li>
+</ul>
+<p>第二步 根据请求和响应, 针对其中每个参数详细的设计测试用例</p>
+<ul>
+<li>参数值的数据测试 参数值的长度, 参数值的类型, 参数的空值, 参数值为Null</li>
+<li>参数本身的测试</li>
+<li>考虑参数的业务场景</li>
+</ul>
+<p>第三步 针对业务功能设计测试用例</p>
+<p>第四步 设计接口参数的测试用例</p>
+<p>操作步骤</p>
+<ul>
+<li>思维导图</li>
+<li>导图转化 为excel</li>
+</ul>
+<h1 id="Postman-实现接口自动化"><a href="#Postman-实现接口自动化" class="headerlink" title="Postman 实现接口自动化"></a>Postman 实现接口自动化</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Postman是一个用于调试HTTP请求的工具,它提供了友好的界面帮助分析、构造HTTP请求，并分析响应数据。</p>
+<p>实际工作中，开发和测试基本上都有使用Postman来进行接口调试工作</p>
+<p><code>REST</code>, <code>SOAP</code>, <code>GraphQL</code> requests</p>
+<h2 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h2><p>模拟浏览器, APP客户端, 向服务器发送接口请求, 并获取数据</p>
+<h2 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h2><h3 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h3><p>依照接口文档的规定设置接口的请求方法, URL, 请求头, 请求体来完成请求数据的构造</p>
+<p>恩, 之前用过, 基础就带过吧 🎓</p>
+<h2 id="高级用法"><a href="#高级用法" class="headerlink" title="高级用法"></a>高级用法</h2><h3 id="Postman管理测试用例"><a href="#Postman管理测试用例" class="headerlink" title="Postman管理测试用例"></a>Postman管理测试用例</h3><p>利用collection来存取</p>
+<h3 id="Postman断言"><a href="#Postman断言" class="headerlink" title="Postman断言"></a>Postman断言</h3><p>为了进行自动化测试，我们必须让计算机帮助我们判断实际结果与预期结果是否一致。</p>
+<p>我们可以通过断言，来让计算机运行时，帮助我们判断结果</p>
+<p>断言：计算机自动判断两组数据的关系是否为真时的过程，就叫做断言。</p>
+<h4 id="断言代码片段介绍"><a href="#断言代码片段介绍" class="headerlink" title="断言代码片段介绍"></a>断言代码片段介绍</h4><ul>
+<li><p>断言响应状态码</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">pm.<span class="title function_">test</span>(<span class="string">&quot;Status code is 200&quot;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    pm.<span class="property">response</span>.<span class="property">to</span>.<span class="property">have</span>.<span class="title function_">status</span>(<span class="number">200</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
+<li><p>断言响应数据是否包含XX</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">pm.<span class="title function_">test</span>(<span class="string">&quot;Body matches string&quot;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    pm.<span class="title function_">expect</span>(pm.<span class="property">response</span>.<span class="title function_">text</span>()).<span class="property">to</span>.<span class="title function_">include</span>(<span class="string">&quot;string_you_want_to_search&quot;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
+<li><p>断言Json数据</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">pm.<span class="title function_">test</span>(<span class="string">&quot;Your test name&quot;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> jsonData = pm.<span class="property">response</span>.<span class="title function_">json</span>();</span><br><span class="line">    pm.<span class="title function_">expect</span>(jsonData.<span class="property">value</span>).<span class="property">to</span>.<span class="title function_">eql</span>(<span class="number">100</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
+<li><p>断言整个响应体</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">pm.<span class="title function_">test</span>(<span class="string">&quot;Body is correct&quot;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    pm.<span class="property">response</span>.<span class="property">to</span>.<span class="property">have</span>.<span class="title function_">body</span>(<span class="string">&quot;response_body_string&quot;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
+<li><p>断言响应头Content-Type是否存在</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">pm.<span class="title function_">test</span>(<span class="string">&quot;Content-Type is present&quot;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    pm.<span class="property">response</span>.<span class="property">to</span>.<span class="property">have</span>.<span class="title function_">header</span>(<span class="string">&quot;Content-Type&quot;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
+<li><p>断言响应时间不超过XX</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">pm.<span class="title function_">test</span>(<span class="string">&quot;Response time is less than 200ms&quot;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    pm.<span class="title function_">expect</span>(pm.<span class="property">response</span>.<span class="property">responseTime</span>).<span class="property">to</span>.<span class="property">be</span>.<span class="title function_">below</span>(<span class="number">200</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="supercoko.github.io">SuperCoko</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://supercoko.github.io/2023/02/15/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95-%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/">https://supercoko.github.io/2023/02/15/自动化测试-接口测试/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://supercoko.github.io" target="_blank">Coko</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/">接口测试</a><a class="post-meta__tags" href="/tags/postman/">postman</a><a class="post-meta__tags" href="/tags/Jmeter/">Jmeter</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.anime-pictures.net/previews/c11/c1121aab56db2ca4c77dd5a963626650_bp.jpg.avif" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/02/15/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95-UI%E8%87%AA%E5%8A%A8%E5%8C%96/"><img class="prev-cover" src="https://cdn.anime-pictures.net/previews/9fb/9fb5df97a54e3bcc6d5864324ae3b2d2_bp.png.avif" onerror="onerror=null;src='/img/404.png'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">自动化测试 - UI自动化</div></div></a></div><div class="next-post pull-right"><a href="/2023/02/15/%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7/"><img class="next-cover" src="https://images4.alphacoders.com/130/thumbbig-1302087.webp" onerror="onerror=null;src='/img/404.png'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">抓包工具</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BF%85%E5%A4%87%E7%90%86%E8%AE%BA%E7%90%86%E8%AE%BA"><span class="toc-text">必备理论理论</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%B0%E4%BD%8D"><span class="toc-text">地位</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5"><span class="toc-text">基础概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E6%A6%82%E5%BF%B5"><span class="toc-text">接口和接口测试概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E7%B1%BB"><span class="toc-text">分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E7%9A%84%E8%AE%BF%E9%97%AE%E5%BD%A2%E5%BC%8F"><span class="toc-text">接口的访问形式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E6%8E%A5%E5%8F%A3"><span class="toc-text">如何设计接口</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP%E5%8D%8F%E8%AE%AE"><span class="toc-text">HTTP协议</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-text">HTTP协议的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86"><span class="toc-text">HTTP协议的组成部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP%E8%AF%B7%E6%B1%82"><span class="toc-text">HTTP请求</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%B7%E6%B1%82%E8%A1%8C"><span class="toc-text">请求行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%B7%E6%B1%82%E5%A4%B4"><span class="toc-text">请求头</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%B7%E6%B1%82%E4%BD%93"><span class="toc-text">请求体</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP%E5%93%8D%E5%BA%94"><span class="toc-text">HTTP响应</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%8A%B6%E6%80%81%E8%A1%8C"><span class="toc-text">状态行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%93%8D%E5%BA%94%E5%A4%B4"><span class="toc-text">响应头</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%93%8D%E5%BA%94%E6%AD%A3%E6%96%87-%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E9%87%8D%E7%82%B9%E6%B5%8B%E8%AF%95%E5%86%85%E5%AE%B9"><span class="toc-text">响应正文 (接口测试重点测试内容)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTPS"><span class="toc-text">HTTPS</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#HTTPS%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-text">HTTPS的作用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HTTP%E4%B8%8EHTTPS%E5%8C%BA%E5%88%AB"><span class="toc-text">HTTP与HTTPS区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3HTTPS"><span class="toc-text">深入理解HTTPS</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86"><span class="toc-text">会话管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%9A%E8%AF%9D%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">会话基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8Ecookie%E5%AE%9E%E7%8E%B0%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86"><span class="toc-text">基于cookie实现会话管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8ESession%E5%AE%9E%E7%8E%B0%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86"><span class="toc-text">基于Session实现会话管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8EToken%E5%AE%9E%E7%8E%B0%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86"><span class="toc-text">基于Token实现会话管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%9A%E8%AF%9D%E6%9C%89%E6%95%88%E6%97%B6%E9%97%B4%E6%8E%A7%E5%88%B6"><span class="toc-text">会话有效时间控制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E9%9A%BE%E7%82%B9-%E7%99%BB%E5%BD%95%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95"><span class="toc-text">接口测试难点 - 登录接口测试处理方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E7%AD%BE%E5%90%8D"><span class="toc-text">接口签名</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3"><span class="toc-text">接口文档</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86"><span class="toc-text">接口文档组成部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E5%88%86%E7%B1%BB"><span class="toc-text">接口文档分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E8%A7%84%E8%8C%83"><span class="toc-text">接口规范</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%A0%E7%BB%9F%E9%A3%8E%E6%A0%BC%E6%8E%A5%E5%8F%A3"><span class="toc-text">传统风格接口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#restful%E9%A3%8E%E6%A0%BC%E6%8E%A5%E5%8F%A3"><span class="toc-text">restful风格接口</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-text">接口测试的工作流程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%90%86%E6%83%B3%E6%83%85%E5%86%B5"><span class="toc-text">理想情况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E9%99%85%E5%B7%A5%E4%BD%9C%E7%9A%84%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95"><span class="toc-text">实际工作的接口测试</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E7%94%A8%E4%BE%8B%E8%AE%BE%E8%AE%A1"><span class="toc-text">接口用例设计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E7%94%A8%E4%BE%8B%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF"><span class="toc-text">接口用例设计思路</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E7%94%A8%E4%BE%8B%E6%97%B6%E7%9A%84%E5%9B%9B%E5%A4%A7%E7%BB%B4%E5%BA%A6"><span class="toc-text">设计用例时的四大维度</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95"><span class="toc-text">接口功能测试用例的设计方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E6%8E%A5%E5%8F%A3%E7%94%A8%E4%BE%8B%E8%AE%BE%E8%AE%A1"><span class="toc-text">单接口用例设计</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Postman-%E5%AE%9E%E7%8E%B0%E6%8E%A5%E5%8F%A3%E8%87%AA%E5%8A%A8%E5%8C%96"><span class="toc-text">Postman 实现接口自动化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-text">工作原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%A5%E9%97%A8"><span class="toc-text">入门</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95"><span class="toc-text">基本用法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95"><span class="toc-text">高级用法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Postman%E7%AE%A1%E7%90%86%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B"><span class="toc-text">Postman管理测试用例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Postman%E6%96%AD%E8%A8%80"><span class="toc-text">Postman断言</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%AD%E8%A8%80%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5%E4%BB%8B%E7%BB%8D"><span class="toc-text">断言代码片段介绍</span></a></li></ol></li></ol></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By SuperCoko</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">welcome to my blog</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/izumi.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body></html>
