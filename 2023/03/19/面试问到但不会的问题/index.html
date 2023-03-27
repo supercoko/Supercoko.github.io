@@ -1,0 +1,355 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>面试问到但不会的问题 | Coko</title><meta name="author" content="SuperCoko"><meta name="copyright" content="SuperCoko"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="LinuxTOPtop 命令是 Linux 系统常用命令之一，能够实时显示系统各个进程的资源占用情况，类似于 Windows 系统的任务管理器。以下是一些常用的 top 命令参数123：  -d 秒数：指定 top 命令每隔几秒更新。默认是 3 秒； -b：使用批处理模式输出。一般和 -n 选项合用，用于把 top 命令重定向到文件中； -n 次数：指定 top 命令执行的次数。一般和 -b 选项">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面试问到但不会的问题">
+<meta property="og:url" content="https://supercoko.github.io/2023/03/19/%E9%9D%A2%E8%AF%95%E9%97%AE%E5%88%B0%E4%BD%86%E4%B8%8D%E4%BC%9A%E7%9A%84%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:site_name" content="Coko">
+<meta property="og:description" content="LinuxTOPtop 命令是 Linux 系统常用命令之一，能够实时显示系统各个进程的资源占用情况，类似于 Windows 系统的任务管理器。以下是一些常用的 top 命令参数123：  -d 秒数：指定 top 命令每隔几秒更新。默认是 3 秒； -b：使用批处理模式输出。一般和 -n 选项合用，用于把 top 命令重定向到文件中； -n 次数：指定 top 命令执行的次数。一般和 -b 选项">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.anime-pictures.net/previews/c11/c1121aab56db2ca4c77dd5a963626650_bp.jpg.avif">
+<meta property="article:published_time" content="2023-03-19T02:05:01.000Z">
+<meta property="article:modified_time" content="2023-03-27T03:57:07.432Z">
+<meta property="article:author" content="SuperCoko">
+<meta property="article:tag" content="yGin910">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.anime-pictures.net/previews/c11/c1121aab56db2ca4c77dd5a963626650_bp.jpg.avif"><link rel="shortcut icon" href="/img/favicon2.png"><link rel="canonical" href="https://supercoko.github.io/2023/03/19/%E9%9D%A2%E8%AF%95%E9%97%AE%E5%88%B0%E4%BD%86%E4%B8%8D%E4%BC%9A%E7%9A%84%E9%97%AE%E9%A2%98/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: SuperCoko","link":"链接: ","source":"来源: Coko","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '面试问到但不会的问题',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-03-27 11:57:07'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://pic4.zhimg.com/v2-c21606cc260d1e83272a3b3243a2ff17_r.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">30</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">40</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">17</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.anime-pictures.net/previews/c11/c1121aab56db2ca4c77dd5a963626650_bp.jpg.avif')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Coko</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">面试问到但不会的问题<a class="post-edit-link" href="null_posts/面试问到但不会的问题.md" title="编辑" target="_blank"><i class="fas fa-pencil-alt"></i></a></h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-03-19T02:05:01.000Z" title="发表于 2023-03-19 10:05:01">2023-03-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-03-27T03:57:07.432Z" title="更新于 2023-03-27 11:57:07">2023-03-27</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="面试问到但不会的问题"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><h3 id="TOP"><a href="#TOP" class="headerlink" title="TOP"></a>TOP</h3><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/8a6754f919c5">top 命令是 Linux 系统常用命令之一，能够实时显示系统各个进程的资源占用情况，类似于 Windows 系统的任务管理器。以下是一些常用的 top 命令参数</a><a target="_blank" rel="noopener" href="https://bing.com/search?q=top+%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4">1</a><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/8a6754f919c5">2</a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/zhoug2020/p/6336453.html">3</a>：</p>
+<ul>
+<li><code>-d 秒数</code>：指定 top 命令每隔几秒更新。默认是 3 秒；</li>
+<li><code>-b</code>：使用批处理模式输出。一般和 <code>-n</code> 选项合用，用于把 top 命令重定向到文件中；</li>
+<li><code>-n 次数</code>：指定 top 命令执行的次数。一般和 <code>-b</code> 选项合用；</li>
+<li><code>-p 进程PID</code>：仅查看指定 ID 的进程；</li>
+<li><code>-s</code>：使 top 命令在安全模式中运行，避免在交互模式中出现错误；</li>
+<li><code>-u 用户名</code>：只监听某个用户的进程。</li>
+</ul>
+<h3 id="IFTOP-查看网络流量"><a href="#IFTOP-查看网络流量" class="headerlink" title="IFTOP 查看网络流量"></a>IFTOP 查看网络流量</h3><p>iftop命令来查看Linux系统的网络流量和带宽。</p>
+<p>Iftop是一种基于文本的网络流量监视器，它可以显示当前网络连接的实时流量。</p>
+<ul>
+<li>您可以使用以下命令安装<code>iftop：sudo apt-get install iftop</code>。</li>
+<li>使用以下命令启动<code>iftop：sudo iftop</code>。</li>
+<li>您可以使用以下命令来查看特定接口的流量：<code>sudo iftop -i eth0</code>。</li>
+<li>您可以使用以下命令来查看特定主机的流量：<code>sudo iftop -F 192.168.1.1/24</code></li>
+</ul>
+<h3 id="iftop-命令的常用参数如下："><a href="#iftop-命令的常用参数如下：" class="headerlink" title="iftop 命令的常用参数如下："></a>iftop 命令的常用参数如下：</h3><ul>
+<li><code>-n</code>：禁用 DNS 反向解析。</li>
+<li><code>-N</code>：禁用 DNS 正向解析。</li>
+<li><code>-p</code>：指定要监视的端口。</li>
+<li><code>-i</code>：指定要监视的网络接口。</li>
+<li><code>-B</code>：指定要使用的带宽单位。</li>
+<li><code>-F</code>：指定要使用的过滤器。</li>
+<li><code>-f</code>：指定要使用的配置文件。</li>
+</ul>
+<p>例如，如果您想使用iftop命令来监视 eth0 网络接口的流量，可以使用以下命令：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">iftop -<span class="selector-tag">i</span> eth0</span><br></pre></td></tr></table></figure>
+
+<h3 id="netstat-命令的常用参数如下："><a href="#netstat-命令的常用参数如下：" class="headerlink" title="netstat 命令的常用参数如下："></a>netstat 命令的常用参数如下：</h3><ul>
+<li><code>-a</code>：显示所有连接和监听端口。</li>
+<li><code>-n</code>：禁用 DNS 反向解析。</li>
+<li><code>-p</code>：显示与进程相关的信息。</li>
+<li><code>-r</code>：显示路由表。</li>
+<li><code>-s</code>：显示网络统计信息。</li>
+<li><code>-t</code>：显示 TCP 连接。</li>
+<li><code>-u</code>：显示 UDP 连接。</li>
+</ul>
+<p>例如，如果您想使用 netstat 命令来显示所有连接和监听端口，可以使用以下命令：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">netstat -<span class="selector-tag">a</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2><h3 id="HTTP1-0和HTTP1-1区别"><a href="#HTTP1-0和HTTP1-1区别" class="headerlink" title="HTTP1.0和HTTP1.1区别"></a>HTTP1.0和HTTP1.1区别</h3><p>HTTP1.1相对于HTTP1.0的主要改进有以下几点：</p>
+<ol>
+<li>持久连接：HTTP1.1支持持久连接，可以在一个TCP连接上发送多个HTTP请求和响应，减少了TCP连接的建立和关闭的开销，提高了性能。</li>
+<li>分块传输编码：HTTP1.1支持分块传输编码，可以将一个大的HTTP响应分成多个块进行传输，提高了传输效率。</li>
+<li>虚拟主机：HTTP1.1支持虚拟主机，可以在一台服务器上托管多个域名，提高了服务器的利用率。</li>
+<li>缓存控制：HTTP1.1支持更加灵活的缓存控制，可以通过Cache-Control和Expires等头部字段来控制缓存的行为。</li>
+<li>更加严格的语法：HTTP1.1对HTTP1.0的语法进行了一些修改和完善，使得HTTP1.1更加严格和规范。</li>
+</ol>
+<h3 id="HTTP1-0和1-1应用场景"><a href="#HTTP1-0和1-1应用场景" class="headerlink" title="HTTP1.0和1.1应用场景"></a>HTTP1.0和1.1应用场景</h3><p>HTTP1.0和HTTP1.1的应用场景没有明显的区别，但是HTTP1.1相对于HTTP1.0有更好的性能和更加灵活的缓存控制，因此HTTP1.1更加适用于高性能的Web应用。</p>
+<h3 id="持久连接和非持久连接"><a href="#持久连接和非持久连接" class="headerlink" title="持久连接和非持久连接"></a>持久连接和非持久连接</h3><p>HTTP持久连接和非持久连接的主要区别在于TCP连接的使用方式。非持久连接每次请求都需要建立一个新的TCP连接，请求结束后立即关闭TCP连接，而持久连接可以在一个TCP连接上发送多个HTTP请求和响应，减少了TCP连接的建立和关闭的开销，提高了性能。</p>
+<ul>
+<li><p>一个使用非持久连接的例子是，当您在浏览器中访问一个网站时，浏览器会为每个请求建立一个新的TCP连接，请求结束后立即关闭TCP连接。这种方式可以保证每个请求的独立性，但是会增加TCP连接的建立和关闭的开销，降低性能。</p>
+</li>
+<li><p>一个使用持久连接的例子是，当您在浏览器中访问一个使用HTTP1.1协议的网站时，浏览器会在一个TCP连接上发送多个HTTP请求和响应，减少了TCP连接的建立和关闭的开销，提高了性能。</p>
+</li>
+</ul>
+<h3 id="HTTP和HTTPS区别"><a href="#HTTP和HTTPS区别" class="headerlink" title="HTTP和HTTPS区别"></a>HTTP和HTTPS区别</h3><p>HTTP和HTTPS都是超文本传输协议，但是HTTPS是具有安全性的SSL&#x2F;TLS加密传输协议，信息是加密传输的。HTTP和HTTPS使用的是完全不同的连接方式，用的端口也不一样，前者是80，后者是443。</p>
+<h3 id="非对称加密"><a href="#非对称加密" class="headerlink" title="非对称加密"></a>非对称加密</h3><p>公钥加密的过程如下：</p>
+<ol>
+<li>接收方生成一对密钥，一把是公钥，一把是私钥。</li>
+<li>接收方将公钥发送给发送方。</li>
+<li>发送方使用接收方的公钥对信息进行加密。</li>
+<li>接收方使用自己的私钥对信息进行解密。</li>
+</ol>
+<h3 id="SSL-x2F-TLS"><a href="#SSL-x2F-TLS" class="headerlink" title="SSL&#x2F;TLS"></a>SSL&#x2F;TLS</h3><p>SSL（Secure Sockets Layer）和TLS（Transport Layer Security）是一种公钥加密技术，用于保护网络通信的安全。SSL&#x2F;TLS协议可以保证信息的机密性、完整性和真实性，是HTTPS协议的核心。</p>
+<h3 id="证书"><a href="#证书" class="headerlink" title="证书"></a>证书</h3><p>HTTPS证书是一种由数字证书认证机构（CA）颁发的数字证书，用于证明网站的身份。HTTPS证书包含了网站的公钥，以及证书的颁发机构、有效期等信息。当用户访问一个使用HTTPS协议的网站时，浏览器会向网站请求证书，然后验证证书的有效性，如果证书有效，则使用证书中的公钥对信息进行加密传输。</p>
+<h3 id="HTTPS一定安全吗"><a href="#HTTPS一定安全吗" class="headerlink" title="HTTPS一定安全吗"></a>HTTPS一定安全吗</h3><p>HTTPS协议可以保证信息的机密性和完整性，但是并不能保证信息的真实性，也就是说，HTTPS协议并不能保证网站的安全性。如果网站本身存在漏洞或者被攻击者篡改，那么HTTPS协议也无法保证信息的安全。</p>
+<h3 id="为什么是3次握手不是两次"><a href="#为什么是3次握手不是两次" class="headerlink" title="为什么是3次握手不是两次"></a>为什么是3次握手不是两次</h3><h3 id=""><a href="#" class="headerlink" title=""></a></h3><h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><h3 id="app性能测试的指标"><a href="#app性能测试的指标" class="headerlink" title="app性能测试的指标"></a>app性能测试的指标</h3><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/560651050">APP性能测试的指标通常包括：耗电量、耗流量、启动退出耗时、响应时延、流畅度、crash率、卡顿、CPU内存等</a><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/560651050">1</a><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/564765092">2</a><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/31649139">3</a><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/560651050">4</a><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/103779561">5</a>。</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/560651050">这些指标可以帮助开发人员了解应用程序的性能，以便在应用程序发布之前进行必要的优化和调整。不同的应用程序可能会有不同的性能测试指标，具体的指标需要根据应用程序的特点和需求来确定</a><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/560651050">1</a><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/564765092">2</a><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/31649139">3</a><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/560651050">4</a><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/103779561">5</a>。</p>
+<p>1、内存：内存消耗测试节点的设计目标是为了让应用不占用过多的系统资源，且及时释放内存，保障整个系统的稳定性。当然关于内存测试，</p>
+<ul>
+<li>在这里我们需要引入几个概念：<ul>
+<li>空闲状态、<ul>
+<li>空闲状态指打开应用后，点击home键让应用后台运行，此时应用处于的状态叫做空闲</li>
+</ul>
+</li>
+<li>中等规格、满规格。</li>
+<li>中等规格和满规格指的是对应用的操作时间的间隔长短不一，中等规格时间较长，满规格时间较短。</li>
+</ul>
+</li>
+<li>内存测试中存在很多测试子项，清单如下： <ul>
+<li>空闲状态下的应用内存消耗； </li>
+<li>中等规格状态下的应用内存消耗； </li>
+<li>满规格状态下的应用内存消耗； </li>
+<li>应用内存峰值； </li>
+<li>应用内存泄露； </li>
+<li>应用是否常驻内存； </li>
+<li>压力测试后的内存使用。</li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li>CPU： 使用Android提供的view plncopy在CODE上查看代码片派生到我的代码片 adb shell dumpsys CPUinfo |grep packagename &gt;&#x2F;address&#x2F;CPU.txt来获取； 使用top命令view plncopy在CODE上查看代码片派生到我的代码片 adbshell top |grep packagename&gt;&#x2F;address&#x2F;CPU.txt来获取。 </li>
+<li>流量： 网络流量测试是针对大部分应用而言的，可能还有部分应用会关注网速、弱网之类的测试。 流量测试包括以下测试项：<ol>
+<li>应用首次启动流量提示； </li>
+<li>应用后台连续运行2小时的流量值； </li>
+<li>应用高负荷运行的流量峰值。</li>
+</ol>
+</li>
+<li>电量： <ol>
+<li>测试手机安装目标APK前后待机功耗无明显差异； </li>
+<li>常见使用场景中能够正常进入待机，待机电流在正常范围内； </li>
+<li>长时间连续使用应用无异常耗电现象。</li>
+</ol>
+</li>
+<li>启动速度： <ol>
+<li>第一类：首次启动–应用首次启动所花费的时间； </li>
+<li>第二类：非首次启动–应用非首次启动所花费的时间； </li>
+<li>第三类：应用界面切换–应用界面内切换所花费的时间。</li>
+</ol>
+</li>
+<li>滑动速度、界面切换速度 </li>
+<li>与服务器交互的网络速度</li>
+</ol>
+<h3 id="微信登录测试用例设计"><a href="#微信登录测试用例设计" class="headerlink" title="微信登录测试用例设计"></a>微信登录测试用例设计</h3><ol>
+<li>功能测试<ol>
+<li>输入正确的用户名和密码，点击提交按钮，验证是否能正确登录。</li>
+<li>输入错误的用户名或者密码,验证登录会失败，并且提示相应的错误信息。</li>
+<li>登录成功后能否能否跳转到正确的页面</li>
+<li>检查能否选择不同登录方式进行登录，如使用手机号登录、使用微信号登录或扫码登录。</li>
+<li>记住用户名的功能</li>
+<li>登陆失败后，不能记录密码的功能</li>
+<li>密码是否非明文显示显示，使用星号圆点等符号代替。</li>
+<li>有验证码时，还要考虑文字是否扭曲过度导致辨认难度大，考虑颜色、刷新或换一个按钮是否好用</li>
+<li>登录页面中的注册、忘记密码，登出用另一帐号登陆等链接是否正确</li>
+<li>输入密码的时候，大写键盘开启的时候要有提示信息。</li>
+<li>什么都不输入，点击提交按钮，检查提示信息。</li>
+</ol>
+</li>
+<li>界面测试<ol>
+<li>布局是否合理，testbox和按钮是否整齐。</li>
+<li>testbox和按钮的长度，高度是否复合要求。</li>
+<li>界面的设计风格是否与UI的设计风格统一。</li>
+<li>界面中的文字简洁易懂，没有错别字。</li>
+</ol>
+</li>
+<li>性能测试<ol>
+<li>打开登录页面，需要的时间是否在需求要求的时间内。</li>
+<li>输入正确的用户名和密码后，检查登录成功跳转到新页面的时间是否在需求要求的时间内。</li>
+<li>模拟大量用户同时登陆，检查一定压力下能否正常登陆跳转。</li>
+</ol>
+</li>
+<li>安全性测试<ol>
+<li>登录成功后生成的Cookie，是否是httponly (否则容易被脚本盗取)。</li>
+<li>用户名和密码是否通过加密的方式，发送给Web服务器。</li>
+<li>用户名和密码的验证，应该是用服务器端验证， 而不能单单是在客户端用javascript 验证。</li>
+<li>用户名和密码的输入框，应该屏蔽SQL注入攻击。</li>
+<li>用户名和密码的的输入框，应该禁止输入脚本 （防止XSS攻击）。</li>
+<li>防止暴力破解，检测是否有错误登陆的次数限制。</li>
+<li>是否支持多用户在同一机器上登录。</li>
+<li>同一用户能否在多台机器上登录。</li>
+</ol>
+</li>
+<li>兼容性测试<ol>
+<li>不同移动平台或PC环境下下能否显示正常且功能正常</li>
+<li>同种平台下不同微信版本下能否显示正常且功能正常。</li>
+<li>不同的分辨率下显示是否正常。</li>
+</ol>
+</li>
+<li>本地化测试 <ol>
+<li>不同语言环境下，页面的显示是否正确。</li>
+</ol>
+</li>
+</ol>
+<h3 id="自动化测试有什么意义，都需要做些什么"><a href="#自动化测试有什么意义，都需要做些什么" class="headerlink" title="自动化测试有什么意义，都需要做些什么"></a>自动化测试有什么意义，都需要做些什么</h3><ol>
+<li><p>代替人工执行重复，复杂的测试活动，提高效率。</p>
+</li>
+<li><p>明确使用场景，准备环境，搭建框架，根据用例编写脚本，批量执行脚本，输出测试报告</p>
+</li>
+</ol>
+<h3 id="印象深刻的bug-怎么解决的"><a href="#印象深刻的bug-怎么解决的" class="headerlink" title="印象深刻的bug, 怎么解决的"></a>印象深刻的bug, 怎么解决的</h3><ul>
+<li>菜谱<ul>
+<li>没什么特别印象深刻的</li>
+<li>主要遇到的bug有<ul>
+<li>前端出错的<ul>
+<li>发送的信息不是要求的数据</li>
+</ul>
+</li>
+<li>后端出错的<ul>
+<li>数据库问题, 该变了表的结构, 但原来的数据库没有删除旧的表</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>SCP<ul>
+<li>player, VR右摇杆问题的bug<ul>
+<li>输出右摇杆数据检测问题</li>
+<li>发现</li>
+</ul>
+</li>
+<li>UI提示信息消失不了<ul>
+<li>重叠生成</li>
+<li>取消重叠销毁</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><h3 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h3><h3 id="事务界别"><a href="#事务界别" class="headerlink" title="事务界别"></a>事务界别</h3><h3 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h3><h3 id="drop-turcate-delete区别"><a href="#drop-turcate-delete区别" class="headerlink" title="drop turcate delete区别"></a>drop turcate delete区别</h3><h3 id="慢查询优化"><a href="#慢查询优化" class="headerlink" title="慢查询优化"></a>慢查询优化</h3><p>要对慢查询进行优化，首先要搞清楚慢查询的原因，原因主要有三：</p>
+<p>（1）加载了不需要的数据列</p>
+<p>（2）查询条件没有命中索引</p>
+<p>（3）数据量太大</p>
+<h2 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h2><h3 id="进程线程"><a href="#进程线程" class="headerlink" title="进程线程"></a>进程线程</h3><h2 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h2><h3 id="深浅拷贝-拓展"><a href="#深浅拷贝-拓展" class="headerlink" title="深浅拷贝 拓展"></a>深浅拷贝 拓展</h3><p>由数字，字符和下划线组成的短字符串以及[-5,256]内的整数存在内存驻留，将其赋值给多个不同的对象时，内存中只有一个副本，多个对象共享该副本，故CD选项结果均为True；对于A选项，元组的[:]并不会创建副本，而是返回同一个对象的引用，所以t1和t2的id值均一样，结果为True；对于B选项，列表的[:]会创建副本，其id值发生改变，结果为False。</p>
+<h3 id="内存管理和垃圾回收"><a href="#内存管理和垃圾回收" class="headerlink" title="内存管理和垃圾回收"></a>内存管理和垃圾回收</h3><h3 id="米哈游测试开发问题"><a href="#米哈游测试开发问题" class="headerlink" title="米哈游测试开发问题"></a>米哈游测试开发问题</h3><blockquote>
+<p>这个是22年8月的, 应该是程序&amp;技术部门的, 不是我现在找的, 质量管理部门</p>
+</blockquote>
+<h3 id="面向对象和面向过程的区别"><a href="#面向对象和面向过程的区别" class="headerlink" title="面向对象和面向过程的区别"></a>面向对象和面向过程的区别</h3><p>面向过程和面向对象是两种不同的编程思想。面向过程是一种以事件为中心的编程思想，编程的时候把解决问题的步骤分析出来，然后用函数把这些步骤实现，在一步一步的具体步骤中再按顺序调用函数。而面向对象是将构成问题的事物，分解成若干个对象，建立对象的目的不是为了完成一个步骤，而是为了描述某个事物在解决问题时所扮演的角色。面向对象具有三大特征：封装性、继承性和多态性，而面向过程没有继承性和多态性，并且面向过程的封装只是封装功能，而面向对象可以封装数据和功能</p>
+<h3 id="排序算法稳定性"><a href="#排序算法稳定性" class="headerlink" title="排序算法稳定性"></a>排序算法稳定性</h3><h3 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h3><h3 id="数据库ACID特性"><a href="#数据库ACID特性" class="headerlink" title="数据库ACID特性"></a>数据库ACID特性</h3><h3 id="索引是什么，越多越好？"><a href="#索引是什么，越多越好？" class="headerlink" title="索引是什么，越多越好？"></a>索引是什么，越多越好？</h3><h3 id="装饰器是什么？"><a href="#装饰器是什么？" class="headerlink" title="装饰器是什么？"></a>装饰器是什么？</h3><h3 id="sql计算name数量"><a href="#sql计算name数量" class="headerlink" title="sql计算name数量"></a>sql计算name数量</h3><h3 id="查姓名人数场景测试"><a href="#查姓名人数场景测试" class="headerlink" title="查姓名人数场景测试"></a>查姓名人数场景测试</h3></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="supercoko.github.io">SuperCoko</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://supercoko.github.io/2023/03/19/%E9%9D%A2%E8%AF%95%E9%97%AE%E5%88%B0%E4%BD%86%E4%B8%8D%E4%BC%9A%E7%9A%84%E9%97%AE%E9%A2%98/">https://supercoko.github.io/2023/03/19/面试问到但不会的问题/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://supercoko.github.io" target="_blank">Coko</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://cdn.anime-pictures.net/previews/c11/c1121aab56db2ca4c77dd5a963626650_bp.jpg.avif" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2023/03/11/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E7%82%B9%E8%AE%B0%E5%BD%95/"><img class="next-cover" src="https://cdn.anime-pictures.net/previews/9fb/9fb5df97a54e3bcc6d5864324ae3b2d2_bp.png.avif" onerror="onerror=null;src='/img/404.png'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">笔试知识点记录</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux"><span class="toc-text">Linux</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#TOP"><span class="toc-text">TOP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IFTOP-%E6%9F%A5%E7%9C%8B%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F"><span class="toc-text">IFTOP 查看网络流量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#iftop-%E5%91%BD%E4%BB%A4%E7%9A%84%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="toc-text">iftop 命令的常用参数如下：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#netstat-%E5%91%BD%E4%BB%A4%E7%9A%84%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="toc-text">netstat 命令的常用参数如下：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C"><span class="toc-text">网络</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP1-0%E5%92%8CHTTP1-1%E5%8C%BA%E5%88%AB"><span class="toc-text">HTTP1.0和HTTP1.1区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP1-0%E5%92%8C1-1%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">HTTP1.0和1.1应用场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%81%E4%B9%85%E8%BF%9E%E6%8E%A5%E5%92%8C%E9%9D%9E%E6%8C%81%E4%B9%85%E8%BF%9E%E6%8E%A5"><span class="toc-text">持久连接和非持久连接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP%E5%92%8CHTTPS%E5%8C%BA%E5%88%AB"><span class="toc-text">HTTP和HTTPS区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86"><span class="toc-text">非对称加密</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SSL-x2F-TLS"><span class="toc-text">SSL&#x2F;TLS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%81%E4%B9%A6"><span class="toc-text">证书</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTPS%E4%B8%80%E5%AE%9A%E5%AE%89%E5%85%A8%E5%90%97"><span class="toc-text">HTTPS一定安全吗</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF3%E6%AC%A1%E6%8F%A1%E6%89%8B%E4%B8%8D%E6%98%AF%E4%B8%A4%E6%AC%A1"><span class="toc-text">为什么是3次握手不是两次</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text"></span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95"><span class="toc-text">测试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#app%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E7%9A%84%E6%8C%87%E6%A0%87"><span class="toc-text">app性能测试的指标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E7%99%BB%E5%BD%95%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%E8%AE%BE%E8%AE%A1"><span class="toc-text">微信登录测试用例设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%9C%89%E4%BB%80%E4%B9%88%E6%84%8F%E4%B9%89%EF%BC%8C%E9%83%BD%E9%9C%80%E8%A6%81%E5%81%9A%E4%BA%9B%E4%BB%80%E4%B9%88"><span class="toc-text">自动化测试有什么意义，都需要做些什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%B0%E8%B1%A1%E6%B7%B1%E5%88%BB%E7%9A%84bug-%E6%80%8E%E4%B9%88%E8%A7%A3%E5%86%B3%E7%9A%84"><span class="toc-text">印象深刻的bug, 怎么解决的</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E5%8A%A1"><span class="toc-text">事务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E5%8A%A1%E7%95%8C%E5%88%AB"><span class="toc-text">事务界别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B4%A2%E5%BC%95"><span class="toc-text">索引</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#drop-turcate-delete%E5%8C%BA%E5%88%AB"><span class="toc-text">drop turcate delete区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%85%A2%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96"><span class="toc-text">慢查询优化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="toc-text">操作系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B"><span class="toc-text">进程线程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python"><span class="toc-text">Python</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D-%E6%8B%93%E5%B1%95"><span class="toc-text">深浅拷贝 拓展</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E5%92%8C%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6"><span class="toc-text">内存管理和垃圾回收</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%B3%E5%93%88%E6%B8%B8%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98"><span class="toc-text">米哈游测试开发问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%92%8C%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">面向对象和面向过程的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%A8%B3%E5%AE%9A%E6%80%A7"><span class="toc-text">排序算法稳定性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%BB%E9%94%81"><span class="toc-text">死锁</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93ACID%E7%89%B9%E6%80%A7"><span class="toc-text">数据库ACID特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B4%A2%E5%BC%95%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%8C%E8%B6%8A%E5%A4%9A%E8%B6%8A%E5%A5%BD%EF%BC%9F"><span class="toc-text">索引是什么，越多越好？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A3%85%E9%A5%B0%E5%99%A8%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">装饰器是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sql%E8%AE%A1%E7%AE%97name%E6%95%B0%E9%87%8F"><span class="toc-text">sql计算name数量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E5%A7%93%E5%90%8D%E4%BA%BA%E6%95%B0%E5%9C%BA%E6%99%AF%E6%B5%8B%E8%AF%95"><span class="toc-text">查姓名人数场景测试</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By SuperCoko</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">welcome to my blog</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/izumi.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body></html>
